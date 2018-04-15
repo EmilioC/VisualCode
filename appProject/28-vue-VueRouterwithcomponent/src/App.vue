@@ -16,7 +16,7 @@
         <hr>
         <router-view></router-view>
     </section>
-</template>
+</template> 
 
 <script>
     export default {
