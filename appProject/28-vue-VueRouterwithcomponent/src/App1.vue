@@ -5,7 +5,7 @@
         <router-link to="/contacto">Consultas</router-link>
         <router-link to="/formulario">Formulario</router-link>
         <router-link to="/formulario1">Formulario 1</router-link>
-        <hr>
+                <hr>
         <router-view></router-view>
     </section>
 </template>
