@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+<style>
+
+body {
+    background-color: #ffb3b3;
+}
+
+.p1 {
+    border-style: groove ;
+    padding: 10px;
+    border-top-width: 15px;
+    border-color: #99ccff;
+    margin: 10px;
+}
+.p2 {
+    
+     margin-top: 10px;
+     border-style: groove ;
+
+}
+form {
+  border-style: groove ;
+  margin: 10px;
+  padding: 10px;
+}
+
+.campoFormulario1{
+  background-color:   #B22222;
+  padding: 10px;
+  border-color: #ff66ff;
+  border: solid 10px;
+}
+.campoFormulario2{
+  padding: 10px;
+  border-color: #4dffff;
+}
+.campoFormulario3{
+  padding: 10px;
+  border-color: #66ff33;
+}
+
+</style>
+</head>
+<body>
+
+<p class= "p1"><b>Note:</b> The "border-top-width" property does not work if it is used alone. Use the "border-style" property to set the borders first.
+<header>Formulario 1</header>
+    <form class= "campoFormulario1" action="/action_page.php" method="get">
+      <input list="browsers" name="browser">
+        <datalist id="browsers">
+          <option value="C2-60" >
+          <option value="C2-125">
+          <option value="C2-190">
+          <option value="C4-300">
+          <option value="Ya está criaturita">
+        </datalist>
+      <input type="submit" value="nada">
+      <br>
+      <input class="campoFormulario3" type="checkbox" name="noesimportante" checked>C2-060
+      <input type="checkbox" name="noesimportante">C2-125
+      <input type="checkbox" name="noesimportante">C2-190
+      <input type="checkbox" name="noesimportante">C4-190<br>
+      <input type="checkbox" name="noesimportante" checked>C2-060
+      <input type="checkbox" name="noesimportante">C2-125
+      <input type="checkbox" name="noesimportante">C2-190
+      <input type="checkbox" name="noesimportante">C4-190<br>
+      <input type="checkbox" name="noesimportante" checked>C2-060
+      <input type="checkbox" name="noesimportante">C2-125
+      <input type="checkbox" name="noesimportante">C2-190
+      <input type="checkbox" name="noesimportante">C4-190
+      <br>
+      
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+    </form>
+<header>Formulario 2</header>
+  
+    <form action="/action_page.php" method="get">
+      <fieldset>
+        <legend>Formulario 2</legend>
+      <input list="browsers" name="browser">
+        <datalist id="browsers">
+          <option value="C2-60">
+          <option value="C2-125">
+          <option value="C2-190">
+          <option value="C4-300">
+          <option value="Ya está criaturita">
+        </datalist>
+        <input type="submit">
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
+        <select>
+          <option>ENERO</option>
+          <option>FEBRERO</option>
+          <option>MARZO</option>
+          <option>ABRIL</option>
+          <option>MAYO</option>
+          <option>JUNIO</option>
+          <option>JULIO</option>
+          <option>AGOSTO</option>
+          <option>SEPTIEMBRE</option>
+          <option>OCTUBRE</option>
+          <option>NOVIEMBRE</option>
+          <option>DICIEMBRE</option>
+        </select>
+         <select>
+          <option>2017</option>
+          <option>2018</option>
+         
+        </select>
+       </fieldset>
+    </form>
+
+<header>Formulario 3</header>
+
+      <form action="/action_page.php">
+        First name:<input type="text" name="firstname" value="Mickey"> 
+        Last name:<input type="text" name="lastname" value="Mouse"><br>
+        <input class="campoFormulario1" type="text" value="Mouse">
+        <input class="campoFormulario1" type="text" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+            <select name="cars" size="3" >
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+
+      </form> 
+
+      <form action="/action_page.php">
+       
+            <select name="cars" size="10" multiple>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+      </form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</p>
+<p class= "p1"><b>Note:</b> The "border-top-width" property does not work if it is used alone. Use the "border-style" property to set the borders first.</p>
+
+<p class= "p2"><b>Note:</b> The "border-top-width" property does not work if it is used alone. Use the "border-style" property to set the borders first.</p>
+
+</body>
+</html>

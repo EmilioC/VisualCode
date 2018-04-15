@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Vaya vaya el Doctor Frigodido asomando 
+        behind the tapia
+    </title>
+</head>
+<body>
+    <script>
+        function pruebaEvento ( x ){
+            
+            if ( x < 50 ){
+                alert ("Menos de 50");
+            }
+
+            if ( x >100 ) {
+                alert ("Mayor de 100");
+            }
+
+            for ( var i = 1; i<=x; i++){
+                console.log ("Cuenta" + i);
+            }
+            var i = 1;
+            while ( i <= x ){
+                console.log ("Vamos 2 " + i );
+                i++;
+            }
+        }
+    </script>
+        <a href="#" onclick="javascript:
+        pruebaEvento(22); " >Ver información</a>
+        <br>
+        <a href="#" onclick="javascript:
+        pruebaEvento(101); " >Ver información</a>
+        
+</body>
+</html>

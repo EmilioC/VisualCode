@@ -1,0 +1,504 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"boton",
+				"background-position"
+			],
+			[
+				"bl",
+				"background-color"
+			],
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"s",
+				"select"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"fo",
+				"footer\tTag"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"a",
+				"alt\tAttr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "W3formularios.html",
+			"settings":
+			{
+				"buffer_size": 4918,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "W3FormularioInstalacion.html",
+			"settings":
+			{
+				"buffer_size": 8503,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "W3FormularioInstalacion1.html",
+			"settings":
+			{
+				"buffer_size": 218,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "formulariosW3.html",
+			"settings":
+			{
+				"buffer_size": 3160,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/MapaPasoHtlmal FreeMind.html",
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/W3FormularioInstalacion.html",
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/MapaHtml1.html",
+		"/C/Users/cordobej/Desktop/MapaPM02LEGALES.html",
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/web1.html",
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/miestilo.css",
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/W3FormularioInstalacion1.html",
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/web1Style.css",
+		"/C/Users/cordobej/OneDrive - Air Products and Chemicals, Inc/PERSONAL-ES05409/OPENWEBINARS/EtiquetasComunes.html",
+		"/C/Users/cordo/Desktop/OPENWEBINARS/CursoHTML5CSS3JAVASCRIPT/Ejemplo2.html",
+		"/C/Users/cordo/Google Drive/OPENWEBINARS/Curso HTML5 CSS3 JAVASCRIPT/Ejemplo1.html",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa13068.26971/apiRedsysWs.php",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM_CordobaRojano_Emilio_Tarea1/app/src/main/java/com/cordobej/pmdm/u1/pmdm_cordobarojano_emilio_tarea1/ActivityPrincipal.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa13560.41557/data.xml",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa13560.45763/schema.json",
+		"/C/Users/cordo/Downloads/colors_amber_blue_grey.xml",
+		"/C/Users/cordo/Downloads/colors_light_blue_deep_orange.xml",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/HolaMundo1/app/src/main/java/com/emiliocordoba/holamundo1/Main3Activity.java",
+		"/C/Users/cordo/AppData/Local/Android/sdk/tools/lib/monitor-x86_64/plugins/com.questoid.sqlitebrowser_1.2.0.jar",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.789/Info_Ordenador.xml",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.659/Info_Ordenador.xml",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/03_ListView_Personalizado/app/src/main/java/openwebinars/listview_personalizado/ItemPersona.java",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/03_ListView_Personalizado/app/src/main/java/openwebinars/listview_personalizado/MainActivity.java",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/01_ListView_Simple/app/src/main/java/openwebinars/listview_simple/ActivityListView.java",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/01_ListView_Simple/app/src/main/res/layout/activity_list_view.xml",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/01_ListView_Simple/app/src/main/res/layout/activity_main.xml",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/02_GridView/app/src/main/java/openwebinars/gridview/MainActivity.java",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/02_GridView/app/src/main/res/layout/activity_main.xml",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_02/01_MiPrimerFragment/app/build/generated/source/r/debug/android/support/v4/R.java",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_02/01_MiPrimerFragment/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM_CordobaRojano_Emilio_Tarea1/app/src/main/java/com/cordobej/pmdm/u1/pmdm_cordobarojano_emilio_tarea1/ActivitySecundaria.java",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/Clase_03/03_ListView_Personalizado/app/src/main/java/openwebinars/listview_personalizado/AdaptadorPersona.java",
+		"/C/Users/cordo/AndroidStudioProjects/Descargas/OneNoteAPISampleAndroid/OneNoteServiceCreatePageExample/src/com/example/onenoteservicecreatepageexample/Constants.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/SGE/SGE_CordobaRojano_Emilio_TareaGlobal/Julio Global SGE/Program.cs",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/SGE/SGE_CordobaRojano_Emilio_TareaGlobal/Librerías SGE/SDK/Bin/Microsoft.Crm.Outlook.Sdk.xml",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.790/data.xml",
+		"/F/winamp_cache_0001.xml",
+		"/C/Users/cordo/AndroidStudioProjects/PMDM_CordobaRojano_Emilio_Tarea1/app/src/main/java/com/cordobej/pmdm/u1/pmdm_cordobarojano_emilio_tarea1/ActivitySecundaria.java",
+		"/C/Users/cordo/AndroidStudioProjects/PMDM_CordobaRojano_Emilio_Tarea1/app/src/main/java/com/cordobej/pmdm/u1/pmdm_cordobarojano_emilio_tarea1/ActivityPrincipal.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM Examen final/controlUsuario.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM Examen final/grabadora.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM Examen final/Resumen ejercicios.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.623/MainActivity.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/PSP_MAY_EJREP_1617_1.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/worker.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/PSP_MAY_EJREP_1617_3.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/productos.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/empleados.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/sucursales.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/universidad.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/zonas.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/departamentos.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM Examen final/ActivityKey.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM Examen final/Activity1.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/20170512 PSP Ejemplo/SSLServer/src/com/foc/psp/u5/SSLServer.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.077/PSP_MAY_EJREP_1617_3.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/20170512 PSP Ejemplo/SSLServer.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/20170505 PSP Ejemplo/sslCliente/src/com/foc/psp/u5/SSLClient.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Cliente/ClientMain.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Cliente/Cliente.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/20170505 PSP Ejemplo/SSLServer/src/com/foc/psp/u5/SSLServer.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Servidor-Cliente seguro resumido.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Servidor/HiloServer.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Hilos/NewThread.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.615/Servidor.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Procesos/LanzadorProcesosPB.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Hilos sincronizados/TestRecursosSincronizados.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP Examen final/Servidor/Servidor.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/Ejemplos/20170512 PSP Ejemplo/SSLServer/src/com/foc/psp/u5/SSLServer.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.309/SSLClient.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.046/HiloServer.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.448/Servidor.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP_CordobaRojano_Emilio_TareaGlobal/SSLSocket/src/sslsocket/Client.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.804/HiloServer.java",
+		"/C/eXist/tools/jetty/etc/jetty.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/Ejemplos/20170505 PSP Ejemplo/sslCliente/src/com/foc/psp/u5/SSLClient.java",
+		"/C/eXist/tools/jetty/etc/webdefault.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP_CordobaRojano_Emilio_TareaGlobal/20170514 2034 Version.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP_CordobaRojano_Emilio_TareaGlobal/SSLSocket/src/sslsocket/Server.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/Ejemplos/20170505 PSP Ejemplo/SSLServer/src/com/foc/psp/u5/SSLServer.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PSP/PSP_CordobaRojano_Emilio_TareaGlobal/20170514 1233 Version.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM_CordobaRojano_Emilio_Tarea3/20170511 0111 MainActivity.java",
+		"/C/Users/cordo/AndroidStudioProjects/Memory2015/app/src/main/res/layout/activity_main.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/DI/DI_CordobaRojano_Emilio_Tarea5/Practica5DI_A/src/Documentacion/indice.xml",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM_CordobaRojano_Emilio_Tarea3/20170510 2350 MainActivity.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM_CordobaRojano_Emilio_Tarea3/20170510 1000 MainActivity",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/PMDM/PMDM_CordobaRojano_Emilio_Tarea3/20170510 2240 MainActivity",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/Evaluar.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/MainActivity.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/TareaGlobalDI/src/tareaglobaldi/CalculadoraController.java",
+		"/C/Users/cordo/Dropbox/2 DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/TareaGlobalDI/src/tareaglobaldi/TareaGlobalDI.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.587/kalculadora.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.364/Calculadora.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/Vista.fxml",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/Evaluar.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/Calculadora.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/calculadora/src/calculadora/calculador.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/MainActivity.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/DI/DI_CordobaRojano_Emilio_TareaGlobal/Controller.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/zonas.xml",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/universidad.xml",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/sucursales.xml",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/empleados.xml",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_Tarea5/productos.xml",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_TareaGlobal/gestionProductos/src/Producto.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_TareaGlobal/gestionProductos/src/prueba.java",
+		"/C/Users/cordo/Dropbox/2º DAM Documentación/AD/AD_CordobaRojano_Emilio_TareaGlobal/gestionProductos/src/AccesoADatos.java",
+		"/C/Users/cordo/workspace/Practica3PSP/src/com/foc/psp/ud03/Worker.java",
+		"/C/Users/cordo/workspace/Practica3PSP/src/com/foc/psp/ud03/Servidor.java",
+		"/C/Users/cordo/workspace/Practica3PSP/src/com/foc/psp/ud03/PrincipalServidor.java",
+		"/C/Users/cordo/workspace/Practica3PSP/src/com/foc/psp/ud03/Log.java",
+		"/C/Users/cordo/workspace/Practica3PSP/src/com/foc/psp/ud03/ClientePrincipal.java",
+		"/C/Users/cordo/workspace/Practica3PSP/src/com/foc/psp/ud03/Cliente.java",
+		"/C/Users/cordo/Desktop/2º DAM PC/SGE/DI_CordobaRojano_Emilio_TareaGlobal/calculadora/src/calculadora/Calculadora.java",
+		"/C/Users/cordo/Desktop/2º DAM PC/SGE/DI_CordobaRojano_Emilio_TareaGlobal/calculadora/src/calculadora/calculador.java",
+		"/C/Users/cordo/AppData/Local/Temp/MainActivity.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.426/Worker.java",
+		"/C/Users/cordo/Desktop/PSP 3/Practica3PSPServidor/src/Servidor.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.400/Servidor.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.214/PrincipalServidor.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.599/ClientePrincipal.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.080/Cliente.java",
+		"//ES05409/Users/cordobej/Desktop/PERSONAL EMILIO CÓRDOBA/FOC GRANADA/2º DAM Documentación/PSP/PSP_U03_A_01_Programacion de comunicaciones en red/ClienteBasico/src/com/foc/psp/u3/Cliente.java",
+		"//ES05409/Users/cordobej/Desktop/PERSONAL EMILIO CÓRDOBA/FOC GRANADA/2º DAM Documentación/PSP/PSP_U03_A_01_Programacion de comunicaciones en red/ServidorEco/src/com/foc/psp/u3/PrincipalServidor.java",
+		"/C/Users/cordo/AppData/Local/Temp/Rar$DIa0.067/Cliente.java",
+		"//ES05409/Users/cordobej/Desktop/PERSONAL EMILIO CÓRDOBA/FOC GRANADA/2º DAM Documentación/PSP/PSP_U03_A_01_Programacion de comunicaciones en red/ServidorEco/src/com/foc/psp/u3/ServidorEco.java",
+		"//ES05409/Users/cordobej/Desktop/PERSONAL EMILIO CÓRDOBA/FOC GRANADA/2º DAM Documentación/PSP/PSP_U03_A_01_Programacion de comunicaciones en red/ClienteBasico/src/com/foc/psp/u3/PrincipalCliente.java",
+		"//ES05409/Users/cordobej/Desktop/PERSONAL EMILIO CÓRDOBA/FOC GRANADA/2º DAM Documentación/PSP/PSP_U04_A_01_Aplicaciones de servicios en red/AdvancedServer/src/com/foc/psp/u4/AS/AdvancedServer.java"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" \n",
+			">\n",
+			"Female"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "W3formularios.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 132.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "W3FormularioInstalacion.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2939,
+								2939
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3150.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "W3FormularioInstalacion1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "formulariosW3.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "EtiquetasComunes.sublime-project",
+	"replace":
+	{
+		"height": 75.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 63.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

@@ -1,0 +1,19 @@
+var employees;
+
+function setup(){
+
+    createCanvas (400,400);
+    
+    employees = {
+    name:"Emilio",
+    col: cpñpr (200,220,0)
+}
+
+}
+
+function draw (){
+    background (0);
+
+    fill(employees.col);
+    text (employees.name, 10 , 50);
+}

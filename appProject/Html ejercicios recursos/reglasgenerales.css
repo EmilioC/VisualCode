@@ -1,0 +1,128 @@
+﻿
+/* Reglas generales */
+* { font-family: sans-serif; }
+body { margin: 0 }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+/* Cabecera y navegación */
+header {
+    background-color: #DFD493;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+header h1 {
+    margin: 0; padding: 10px 10px;
+    font-size: 25px;
+}
+nav {
+    background-color: #EAE2B8;
+    padding: 10px 10px;
+    width: 100%
+}
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0; padding: 0;
+
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 6px;
+}
+/* Secciones centrales */
+
+article {
+    display: inline-block;
+    background: #ccc;
+    width: 240px; height: 240px;
+    margin: 2px 2px;
+    padding: 15px 15px;
+}
+article h1 {
+    font-size: 15px;
+}
+/* Pie */
+footer {
+    background-color: #CBCD00;
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.button1{
+    background-color: blue;
+    border-top-left: 800px;
+    border-top-left-radius: 800px;
+    width: 22%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+        margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+  .button1:hover {
+    color: #1883ba;
+    background-color: #4CAF50;
+    width: 22%;
+  }
+
+
+  .button2 {
+    background-color: red;
+    border-top-right-radius: 800px;
+    width: 22%;
+    margin-right: auto;
+    display: flex;
+  }
+  .button2:hover {
+    color: #1883ba;
+    background-color: #4CAF50;
+  }
+
+.button3 {
+    background-color: red;
+    border-bottom-left-radius: 800px;
+    width: 22%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+
+  }
+  .button3:hover {
+    color: #12BDEA  ;
+    background-color: #B26250;
+    -webkit-transition-duration: 4s;
+    text-transform: uppercase;
+    line-height: 1.8;
+    text-shadow: 3px 2px #13809D;
+    font-size: 30px;
+  
+  }
+.button4 {
+    background-color: red;
+    border-bottom-right-radius: 800px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    left:500px;
+
+}
+.button4:hover {
+    color: #FF0202 ;
+    background-color: #FFFFFF;
+    -webkit-transition-duration: 0.6s;
+    text-transform: uppercase;
+    line-height: 1.8;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 25px;
+    font-color:#F7F400 ;
+    border-radius: 10000px;
+    width: 150px;
+     position:absolute;
+    top:-5px;
+    left:50px;
+}
+

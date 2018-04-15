@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario APT</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="W3FormularioAPTJavaScript_2.css"/>
+<script src="W3FormularioAPTJavaScript_2.js" class="text/JavaScript" ></script>
+
+</head>
+<body>
+<h1  id= "h1APT" >APT </h1>
+<div class = "div1">
+  <form class= "form1">
+      <fieldset>
+      <legend>Formulario APT</legend>
+      <label for="labelEmpleados">Empleado</label>
+      <select id="selectEmpleados" class = "SelectEmpleados"  name="SelectEmpleados">
+          
+          <option value="Antonio">jsonAPT.APT[1].nAPT;</option>
+          <option value="Emilio">Emilio</option>
+          <option value="Manuel">Manuel</option>
+          <option value="Marcos">Marcos</option>
+          <option value="Sergio">Sergio</option>
+          <option value="Jesus">Jesus</option>
+          <option value="Operario1">Operario1</option>
+          <option value="Operario2">Operario2</option>
+          <option value="Operario3">Operario3</option>
+          <option value="Operario4">Operario4</option>
+          <option value="Operario5">Operario5</option>
+          <option value="Operario6">Operario6</option>
+        </select>
+    
+    <label for="Tipos">Tipo</label>
+    <select id="selectcomportamiento" class = "selectTipoRiesgo"  name="country">
+        <option value="Comportamiento">Comportamiento</option>
+        <option value="Condición">Condición</option>
+        <option value="RefuerzoPositivo">Refuerzo positivo</option>
+      </select>
+
+    <label for="CategoriaRiesgos">Categoría</label>
+    <select id="tiposRiesgos" class = "categoria"  name="tiposRiesgos">
+      
+            <option value="Salpicadura/Espray">Salpicadura/Espray</option>
+            <option value="Ser golpeado por algo">Ser golpeado por algo</option>
+            <option value="Peligro de quemadura">Peligro de quemadura</option>
+            <option value="Exposición a producto químico">Exposición a producto químico</option>
+            <option value="Peligro en la conducción ">Peligro en la conducción </option>
+            <option value="Peligro Eléctrico ">Peligro Electrico </option>
+            <option value="Medio Ambiente ">Medio Ambiente </option>
+            <option value="Equipos/Herramientas - Condición ">Equipos/Herramientas - Condición </option>
+            <option value="Caída desde altura/Elevación ">Caída desde altura/Elevación </option>
+            <option value="Peligro de Incendio/Fuego ">Peligro de Incendio/Fuego </option>
+            <option value="Orden y Limpieza ">Orden y Limpieza </option>
+            <option value="Etiquetas/Señalización ">Etiquetas/Señalización </option>
+            <option value="Fuga/Derrame de Material ">Fuga/Derrame de Material </option>
+            <option value="Sobreesfuerzo/Ergonomía ">Sobreesfuerzo/Ergonomía </option>
+            <option value="Atención a la tarea ">Atención a la tarea </option>
+            <option value="Fatiga/Cansancio ">Fatiga/Cansancio </option>
+            <option value="EPIs - Ojos ">EPIs - Ojos </option>
+            <option value="EPIs - Manos  ">EPIs - Manos  </option>
+            <option value="EPIs - Oídos ">EPIs - Oídos </option>
+            <option value="EPIs - Otros ">EPIs - Otros </option>
+            <option value="Atrapamientos ">Atrapamientos </option>
+            <option value="Security ">Security </option>
+            <option value="Resbalar/Tropezar o Caer ">Resbalar/Tropezar o Caer </option>
+            <option value="Mirando por dónde pasa "> </option>
+            <option value="Incumple otras ">Incumple otras </option>
+          </select>
+
+    <label for="descripcion">Descripción</label>
+    <input id= "descripcion" class="inputDescripcion" type="text" value="Material..." >
+
+    <label for="accionTomada">Acción tomada</label>
+    <input id="accionTomada" class="inputDescripcion" type="text" value="Retirada material..."  >
+
+    <label for="Localizacion">Localización</label>
+    <input id= "Localizacion" class="inputDescripcion" type="text" value= "Recinto gas" >
+
+    <label for="fecha">Fecha</label><br>
+    <input id="fecha" type="date" value="14/03/2018" > 
+        
+    <input "btnFijo1" type="submit" value="Submit">
+    </fieldset>
+  </form>
+</div>
+<button class="btnFijo1" type="button" 
+onclick="viewAPT();">ViewAPT</button><br><br>
+<button class="btnFijo2" type="button" 
+onclick="color();">Color</button><br><br>
+ 
+<p id="parrafo1" class ="p">  </p>
+
+<table class ="table2" >
+    <tr>
+      <th>EMPLEADO</th>
+      <th>TIPO</th> 
+      <th>CATEGORÍA</th>
+      <th>DESCRIPCIÓN</th>
+      <th>ACCIÓN TOMADA</th>
+      <th>FECHA</th>
+    </tr>
+    <tr>
+      <td id="tdempleado"/>
+      <td onmouseover="infocomportamiento();" id="tdtipo"/>
+      <td id="tdcategoria"/>
+      <td id="tdescripcion"/>
+      <td id="tdacciontomada"/>
+      <td id="tdfecha"/>
+    </tr>
+     </table>
+</div>
+</body>
+</html>
+
+</body>
+</html>
