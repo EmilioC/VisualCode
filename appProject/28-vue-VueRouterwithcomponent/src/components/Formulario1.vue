@@ -5,7 +5,6 @@
                 <!-- Tabla muestra APT desde Firebase en pantalla-->
         
             <form @submit.prevent="enviarMensaje">
-                    <input v-model="mensaje" type="text" class="form-control"/> 
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control"/>
@@ -49,7 +48,7 @@
                 <input type="submit" value="Enviar mensaje">
                 </form>
                 <hr>
-    </div>
+     </div>
    </div>              
 
 </template>
@@ -68,8 +67,6 @@
     const db = firebase.database();
 
 export default{
-
-   
 
      data: {
             mensaje: null,
@@ -113,10 +110,10 @@ export default{
             },
             enviarMensaje() {
 
-                console.log("inicio mensaje");
+                console.log(this);
                 db.ref('/chats')
                 
-                    .push({
+                    .set({
                         
                         mensaje: this.mensaje,
                         supervisor: this.supervisor,

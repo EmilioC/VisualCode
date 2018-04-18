@@ -1,5 +1,5 @@
 <template>
-    <h2>HOla  </h2>
+    <h2>Hello - Formulario 2  </h2>
 </template>
 
 
