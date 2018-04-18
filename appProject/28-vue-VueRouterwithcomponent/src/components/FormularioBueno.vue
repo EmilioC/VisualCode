@@ -1,7 +1,8 @@
 <template>
-        <div id="app1">
-       
-<div id="app">
+        <div >
+            <h1>{{msg}}</h1>
+            <h1>FORMULARIO 1</h1>
+<div >
                 <!-- Tabla muestra APT desde Firebase en pantalla-->
         
             <form @submit.prevent="enviarMensaje">
@@ -49,9 +50,55 @@
                 <input type="submit" value="Enviar mensaje">
                 </form>
                 <hr>
-    </div>
-   </div>              
-
+      <h1>TABLE 1 </h1>
+               
+<table class="table1">
+        <thead>
+            <th>FECHA</th>
+            <th>ID</th>
+            <th>Aprendizaje</th>
+            <th>Descripcion</th>
+            <th>Accion</th>
+            <th>Tipo APT</th>
+            <th>Categoría</th>
+            <th>Foto</th>
+            <th>Causa</th>
+        </thead >
+            <tr v-for="(mensaje, index) in mensajes" :key="index" >
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.id }} </td>
+                <td> {{ mensaje.descripcion }} </td>
+                <td> {{ mensaje.accion }} </td>
+                <td> {{ mensaje.typeAPT }} </td>
+                <td> {{ mensaje.category }} </td>
+                <td> {{ mensaje.photo }} </td>
+                <td> {{ mensaje.aprendizaje }} </td>
+                <td> {{ mensaje.causes }} </td>
+                <td> <button @click="eliminarMensaje(mensaje.key)">Borrar</button></td>
+            </tr>
+    </table>   
+            <h1>TABLE 3 </h1>
+            <ul>
+             <li v-for="(mensaje, index) in mensajes" :key="mensaje">
+                        {{index}} - {{mensajes.id}}
+                     <tr><td>
+                            <small><i>{{ mensaje.id }}</i></small>
+                            <small><i>{{ mensaje.supervisor }}</i></small>
+                            <small><i>{{ mensaje.fecha }}</i></small>
+                            <small><i>{{ mensaje.descripcion }}</i></small>
+                            <small><i>{{ mensaje.accion }}</i></small>
+                            <small><i>{{ mensaje.typeAPT }}</i></small>
+                            <small><i>{{ mensaje.category }}</i></small>
+                            <small><i>{{ mensaje.photo }}</i></small>
+                            <small><i>{{ mensaje.aprendizaje }}</i></small>
+                            <small><i>{{ mensaje.causes }}</i></small>
+                        <!-- eliminamos solo el mensaje.key, que identifica de manera unívoca el mensaje seleccionado-->
+                        <button @click="eliminarMensaje(mensaje.key)">delete</button>
+                     </td></tr>
+                    </li>
+                </ul>
+        </div>
+        </div>
 </template>
 
 <script >
@@ -66,12 +113,12 @@
     };
     firebase.initializeApp(config);
     const db = firebase.database();
-
 export default{
-
-   
-
-     data: {
+        created() {
+        db.ref('/chats')
+                .on('value', snapshot => this.cargarMensajes(snapshot.val()))
+        },
+        data: {
             mensaje: null,
             id: null,
             supervisor: null,
@@ -87,8 +134,7 @@ export default{
             mensajes: [],
                         
         },
-
- methods: {
+        methods: {
             cargarMensajes(mensajes) {
                 this.mensajes = [];
                 for (let key in mensajes) {
@@ -112,12 +158,8 @@ export default{
                 this.mensajes.reverse();
             },
             enviarMensaje() {
-
-                console.log("inicio mensaje");
                 db.ref('/chats')
-                
                     .push({
-                        
                         mensaje: this.mensaje,
                         supervisor: this.supervisor,
                         descripcion: this.descripcion,
@@ -135,8 +177,6 @@ export default{
                         //this.supervisor= ' '; 
                         console.log(data.key);
                         console.log(this.username);
-                        
-                console.log("fin mensaje");
                     });
             },
             //Recibimos como parámetro key: idenditifador único de actualización en Firebase

@@ -13,6 +13,10 @@
         <router-link to="/formulario1" active-class="activo" tag="li" >
             <a>Formulario 1</a>
         </router-link>
+
+        <router-link to="/formulario2" active-class="activo" tag="li" >
+            <a>Formulario 2</a>
+        </router-link>
         <hr>
         <router-view></router-view>
     </section>
