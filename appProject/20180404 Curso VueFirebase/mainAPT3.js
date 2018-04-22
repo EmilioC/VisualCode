@@ -57,7 +57,7 @@
                 this.mensajes.reverse();
             },
             enviarMensaje() {
-                db.ref('/chats')
+                db.ref('/chats/')
                     .push({
                         mensaje: this.mensaje,
                         supervisor: this.supervisor,
