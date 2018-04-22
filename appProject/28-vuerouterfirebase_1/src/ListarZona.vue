@@ -1,9 +1,8 @@
 <template>
    <div id="app">
-   <div>
-      <form>    
-        
-   <h1> LISTA FUERA DE DIRECTORIO COMPONENTS </h1>               
+  <!-- <div>
+      <form>            
+   <h1> DATOS: basedatos-ccc9b/apt</h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control"/>
@@ -47,12 +46,41 @@
       <button @click="submitName()">Add</button>
                 </form>
                 <hr>
-    </div>
+    </div> -->
+
+<h1>TABLA APT </h1>
+               
+<table class="table1">
+        <thead>
+            <th>FECHA</th>
+            <th>ID</th>
+            <th>Aprendizaje</th>
+            <th>Descripcion</th>
+            <th>Accion</th>
+            <th>Tipo APT</th>
+            <th>Categoría</th>
+            <th>Foto</th>
+            <th>Causa</th>
+        </thead >
+            <tr v-for="(mensaje, index) in apt" :key="index" >
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.id }} </td>
+                <td> {{ mensaje.descripcion }} </td>
+                <td> {{ mensaje.accion }} </td>
+                <td> {{ mensaje.typeAPT }} </td>
+                <td> {{ mensaje.category }} </td>
+                <td> {{ mensaje.photo }} </td>
+                <td> {{ mensaje.aprendizaje }} </td>
+                <td> {{ mensaje.causes }} </td>
+                <td> <button @click="eliminarMensaje(mensaje.key)">Borrar</button></td>
+            </tr>
+    </table>   
+<!--
     <h1> LISTAR APT </h1>
     
     <div>
       <ul>
-        <li v-for="personName of names"
+        <li v-for="personName of apt"
         v-bind:key="personName['.key']">        
           <p>
           <button @click="removeName(personName['.key'])">
@@ -70,15 +98,14 @@
            </p>                 
         </li>
       </ul>
-    </div>   
+    </div> -->  
   </div>
 </template>
 <script>
-import { namesRef } from "./firebase";
+import { aptRef } from "./firebase";
 
 export default {
-
-    data() {
+  data() {
     return {
       id: null,
       supervisor: "JA",
@@ -89,17 +116,17 @@ export default {
       category: "Riesgo tropezar o caer",
       photo: "si",
       aprendizaje: "Responsabilidad equipos en buen estado",
-      causes: "Reducción probabilidad de accidente",
-    };      
-},
+      causes: "Reducción probabilidad de accidente"
+    };
+  },
 
-    firebase: {
-    names: namesRef,
-    },
-    
+  firebase: {
+    apt: aptRef
+  },
+
   methods: {
     submitName() {
-      namesRef.push({
+      aptRef.push({
         id: this.id,
         supervisor: this.supervisor,
         fecha: this.fecha,
@@ -114,17 +141,17 @@ export default {
       this.name = "";
     },
     removeName(key) {
-      namesRef.child(key).remove();
+      aptRef.child(key).remove();
     },
     setEditName(key) {
-      namesRef.child(key).update({ edit: true });
+      aptRef.child(key).update({ edit: true });
     },
     cancelEdit(key) {
-      namesRef.child(key).update({ edit: false });
+      aptRef.child(key).update({ edit: false });
     },
     saveEditName(name) {
       const key = name[".key"];
-      namesRef.child(key).set({
+      aptRef.child(key).set({
         name: person.name,
         edit: false
       });
@@ -132,3 +159,23 @@ export default {
   }
 };
 </script>
+<style>
+table {
+  border: 1px solid black;
+  height: 1%;
+  text-align: left;
+  overflow-x: auto;
+}
+th,
+td {
+  padding: 2%px;
+  text-align: left;
+  border-bottom: 1px solid rgb(0, 5, 4);
+}
+tr:nth-child(even) {
+  background-color: #dbeaeb;
+}
+div {
+  overflow-x: auto;
+}
+</style>

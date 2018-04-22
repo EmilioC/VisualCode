@@ -1,6 +1,6 @@
 <template>
    <div id="app">
-    <div>
+    <!--<div>
       <form>    
         
     <h1> CREAR APT </h1>               
@@ -47,7 +47,39 @@
       <button @click="submitName()">Add</button>
                 </form>
                 <hr>
-    </div>
+    </div> -->
+
+<h1>Al estar este fichero en /componentes, no consigo enlazar
+  con la instancia de la base de datos import { namesRef } from "firebase";
+  al importarla dentro del script </h1>
+               
+<table class="table1">
+        <thead>
+            <th>FECHA</th>
+            <th>ID</th>
+            <th>Aprendizaje</th>
+            <th>Descripcion</th>
+            <th>Accion</th>
+            <th>Tipo APT</th>
+            <th>Categoría</th>
+            <th>Foto</th>
+            <th>Causa</th>
+        </thead >
+            <tr v-for="(mensaje, index) in names" :key="index" >
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.id }} </td>
+                <td> {{ mensaje.descripcion }} </td>
+                <td> {{ mensaje.accion }} </td>
+                <td> {{ mensaje.typeAPT }} </td>
+                <td> {{ mensaje.category }} </td>
+                <td> {{ mensaje.photo }} </td>
+                <td> {{ mensaje.aprendizaje }} </td>
+                <td> {{ mensaje.causes }} </td>
+                <td> <button @click="eliminarMensaje(mensaje.key)">Borrar</button></td>
+            </tr>
+    </table> 
+
+
     <h1> LISTAR APT </h1>
     
     <div>

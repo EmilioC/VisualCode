@@ -3,7 +3,8 @@
     <div>
       <form>    
         
-    <h1> FORMULARIO </h1>               
+    <h1> FORMULARIO 
+      <button @click="submitName()">Add</button> </h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control"/>
@@ -44,7 +45,6 @@
                     <label for="causes">EFECTO EN LA INSTALACIÓN</label>
                     <input type="text" class="form-control" v-model="causes" />
                 </div>
-      <button @click="submitName()">Add</button>
                 </form>
                 <hr>
     </div>
@@ -134,3 +134,91 @@ export default {
   }
 };
 </script>
+<style>
+form{
+
+    
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #119164;
+    align-self: auto;
+    margin-top: 2px;
+    
+  }
+  input {
+    animation-duration: 0.3s;
+    animation-name: slideinSelectCategoriaRiesgo;
+    margin:  1px 10px 10px 10px;
+    background-color: #e94444;
+    border: 2px solid #14cbaf;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #e5e9e8;
+    font-size: 18px;
+
+  
+    text-align-last: center;
+    
+  }
+   @keyframes slideinSelectCategoriaRiesgo {
+    from {
+      margin-left:200px;
+      width: 75%;
+       background-color: #e94444;
+        border: 8px solid #14cbaf;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+      background-color: #e94444;
+        border: 8px solid #14cbaf;
+    }
+  }
+ button.n{
+  
+  
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #ffffff;
+  
+    position:fixed;
+        top: 50%;
+        left: 40%;
+        width: 10%;
+        height:10%;
+        background-color: #e94444;
+        border: 8px solid #14cbaf;
+        font-size: 12px;
+    
+      animation-duration: 2s;
+      animation-name: slideBtnFijo1;
+    }
+    
+    @keyframes slideBtnFijo1 {
+      from {
+        margin-top:100%;
+        left:1%;
+      }
+      10% {
+        font-size: 65px;
+        margin-left: 1%;
+        background-color: rgb(143, 83, 16);
+      }
+      20% {
+        font-size: 20px;
+        margin-left: 1%;
+        background-color: rgb(252, 252, 252);
+      }
+      50% {
+        font-size: 65px;
+        margin-left: 1%;
+        background-color: rgb(253, 252, 250);
+      }
+    
+      to {
+        top: 1%;
+        left: 40%;
+        width: 10%;
+        height: 10%;
+        background-color: rgb(231, 231, 231);
+      }
+    }
+</style>
