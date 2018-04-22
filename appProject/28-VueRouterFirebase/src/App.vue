@@ -1,8 +1,16 @@
 <template>
-  <div id="app">
+    <section>
+        <h1>Rutas con Vue Router</h1>
+        <router-link to="/">Vue home</router-link>
+        <router-link to="/contacto">Contacto</router-link>
+        <hr>
+        <router-view></router-view>
+
+<!-- Insercion formulario bueno del proyecto simple-->
+<div id="app" class="h1Appvue">
     <div>
       <form>     
-        
+      <h2> Inicio FORMULARIO "App.vue" </h2>  
     <h1> CREAR APT </h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
@@ -72,6 +80,8 @@
       </ul>
     </div>   
   </div>
+    </section>
+    
 </template>
 
 <script>
@@ -133,10 +143,10 @@ export default {
   }
 };
 </script>
-
 <style>
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -144,10 +154,14 @@ export default {
   margin-top: 60px;
 }
 
-h1,
+h1, h2 {
+  font-weight: normal;
+  background-color:rgb(77, 235, 111);
+}
 h2 {
   font-weight: normal;
-  background-color: rgba(114, 182, 148, 0.774);
+  background-color:rgb(20, 16, 65);
+  
 }
 
 ul {
@@ -156,15 +170,11 @@ ul {
 }
 
 li {
+  display: inline-block;
   margin: 0 10px;
 }
 
 a {
   color: #42b983;
-}
-
-bottom {
-  background-color: transparent;
-  border: 6px solid black;
 }
 </style>

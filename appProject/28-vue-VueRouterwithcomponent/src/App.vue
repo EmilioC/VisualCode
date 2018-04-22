@@ -1,24 +1,12 @@
 <template>
     <section>
+        <section>
         <h1>Rutas con Vue Router</h1>
-        <router-link to="/" active-class="activo" tag="li" exact>
-            <a>Home</a>
-        </router-link>
-        <router-link to="/contacto" active-class="activo" tag="li" >
-            <a>Contacto</a>
-        </router-link>
-        <router-link to="/formulario" active-class="activo" tag="li" >
-            <a>Formulario</a>
-        </router-link>
-        <router-link to="/formulario1" active-class="activo" tag="li" >
-            <a>Formulario 1</a>
-        </router-link>
-
-        <router-link to="/formulario2" active-class="activo" tag="li" >
-            <a>Formulario 2</a>
-        </router-link>
+        <router-link to="/">Home</router-link>
+        <router-link to="/contacto">Contacto</router-link>
         <hr>
         <router-view></router-view>
+    </section>
     </section>
 </template> 
 

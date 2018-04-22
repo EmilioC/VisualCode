@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <form>     
-        
-    <h1> CREAR APT </h1>               
+      <form>                    
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control"/>
@@ -48,15 +46,13 @@
                 </form>
                 <hr>
     </div>
-    <h1> LISTAR APT </h1>
+    <h1> Hola que tal </h1>
     
     <div>
       <ul>
         <li v-for="personName of names"
         v-bind:key="personName['.key']">        
           <p>
-          <button @click="removeName(personName['.key'])">
-          Remove</button>
           {{personName.id}}
           {{personName.supervisor}}
           {{personName.fecha}}
@@ -67,7 +63,8 @@
           {{personName.photo}}
           {{personName.aprendizaje}}
           {{personName.causes}}
-           </p>                 
+          <button @click="removeName(personName['.key'])">
+          Remove</button> </p>                 
         </li>
       </ul>
     </div>   
@@ -75,32 +72,32 @@
 </template>
 
 <script>
-import { namesRef } from "./firebase";
+import { namesRef } from './firebase';
 
 //Integramos Firebase
 export default {
   data() {
     return {
-      name: "Paul",
-      apellido: "losa",
+      name: 'Paul',
+      apellido: 'losa',
       id: null,
       supervisor: "JA",
       fecha: "20/04/2018",
-      descripcion: "Material dentro del recinto",
-      accion: "Retirada del material",
+      descripcion: null,
+      accion: null,
       typeAPT: "Comportamiento",
       category: "Riesgo tropezar o caer",
       photo: "si",
       aprendizaje: "Responsabilidad equipos en buen estado",
-      causes: "Reducción probabilidad de accidente"
-    };
+      causes: "Reducción probabilidad de accidente",
+    }
   },
   firebase: {
-    names: namesRef
+    names: namesRef,
   },
   methods: {
     submitName() {
-      namesRef.push({
+      namesRef.push({ 
         id: this.id,
         supervisor: this.supervisor,
         fecha: this.fecha,
@@ -110,28 +107,27 @@ export default {
         category: this.category,
         photo: this.photo,
         aprendizaje: this.aprendizaje,
-        causes: this.causes
-      });
-      this.name = "";
+        causes: this.causes,
+        });
+      this.name ='';
     },
-    removeName(key) {
+    removeName(key){
       namesRef.child(key).remove();
     },
-    setEditName(key) {
+    setEditName(key){
       namesRef.child(key).update({ edit: true });
     },
-    cancelEdit(key) {
+    cancelEdit(key){
       namesRef.child(key).update({ edit: false });
     },
-    saveEditName(name) {
-      const key = name[".key"];
-      namesRef.child(key).set({
-        name: person.name,
-        edit: false
-      });
+    saveEditName(name){
+      const key = name ['.key'];
+      namesRef.child(key).set({ 
+        name: person.name, 
+        edit: false });
     }
   }
-};
+}
 </script>
 
 <style>
@@ -147,7 +143,6 @@ export default {
 h1,
 h2 {
   font-weight: normal;
-  background-color: rgba(114, 182, 148, 0.774);
 }
 
 ul {

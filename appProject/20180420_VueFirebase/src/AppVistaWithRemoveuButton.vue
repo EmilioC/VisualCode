@@ -55,8 +55,6 @@
         <li v-for="personName of names"
         v-bind:key="personName['.key']">        
           <p>
-          <button @click="removeName(personName['.key'])">
-          Remove</button>
           {{personName.id}}
           {{personName.supervisor}}
           {{personName.fecha}}
@@ -67,7 +65,8 @@
           {{personName.photo}}
           {{personName.aprendizaje}}
           {{personName.causes}}
-           </p>                 
+          <button @click="removeName(personName['.key'])">
+          Remove</button> </p>                 
         </li>
       </ul>
     </div>   

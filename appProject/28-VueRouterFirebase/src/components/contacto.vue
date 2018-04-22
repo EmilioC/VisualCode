@@ -73,13 +73,12 @@
     </div>   
   </div>
 </template>
-
 <script>
-import { namesRef } from "./firebase";
+import { namesRef } from "firebase";
 
-//Integramos Firebase
 export default {
-  data() {
+
+    data() {
     return {
       name: "Paul",
       apellido: "losa",
@@ -92,10 +91,10 @@ export default {
       category: "Riesgo tropezar o caer",
       photo: "si",
       aprendizaje: "Responsabilidad equipos en buen estado",
-      causes: "Reducción probabilidad de accidente"
+      causes: "Reducción probabilidad de accidente",
     };
-  },
-  firebase: {
+  
+},firebase: {
     names: namesRef
   },
   methods: {
@@ -133,38 +132,3 @@ export default {
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-h1,
-h2 {
-  font-weight: normal;
-  background-color: rgba(114, 182, 148, 0.774);
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-
-bottom {
-  background-color: transparent;
-  border: 6px solid black;
-}
-</style>
