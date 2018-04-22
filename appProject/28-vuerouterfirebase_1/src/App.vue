@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">   
+     
 
     <section>
         <router-link to="/">Home</router-link>
         <router-link to="/contacto">Contacto</router-link>
         <router-link to="/lista">Lista</router-link>
-        <router-link to="/listafuera">Listafuera</router-link>
-        <router-link to="/formulario">Formulario</router-link>
-        <router-link to="/listarzona">Listar Zona</router-link>
+        <router-link to="/listafuera">Lista tabla NAME</router-link>
+        <router-link to="/formulario">Formulario NAME</router-link>
+        <router-link to="/listarzona">Lista tabla APT</router-link>
+        <router-link to="/formularioapt">Formulario APT</router-link>
         <hr>
         <router-view></router-view>
     </section>

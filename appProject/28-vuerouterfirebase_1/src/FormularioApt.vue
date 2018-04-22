@@ -1,9 +1,12 @@
 <template>
    <div id="app">
-    <!-- <div>
+
+       <img src="./assets/logo.png">  
+    <div>
       <form>    
         
-   <h1> LISTA FUERA DE DIRECTORIO COMPONENTS </h1>               
+    <h1> FORMULARIO TABLA APT
+      <button @click="submitName()">Add</button> </h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control"/>
@@ -44,38 +47,12 @@
                     <label for="causes">EFECTO EN LA INSTALACIÓN</label>
                     <input type="text" class="form-control" v-model="causes" />
                 </div>
-      <button @click="submitName()">Add</button>
                 </form>
                 <hr>
-    </div>-->
-<table class="table1">
-        <thead>
-            <th>FECHA</th>
-            <th>ID</th>
-            <th>Aprendizaje</th>
-            <th>Descripcion</th>
-            <th>Accion</th>
-            <th>Tipo APT</th>
-            <th>Categoría</th>
-            <th>Foto</th>
-            <th>Causa</th>
-        </thead >
-            <tr v-for="(mensaje, index) in names" :key="index" >
-                <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.id }} </td>
-                <td> {{ mensaje.descripcion }} </td>
-                <td> {{ mensaje.accion }} </td>
-                <td> {{ mensaje.typeAPT }} </td>
-                <td> {{ mensaje.category }} </td>
-                <td> {{ mensaje.photo }} </td>
-                <td> {{ mensaje.aprendizaje }} </td>
-                <td> {{ mensaje.causes }} </td>
-                <td> <button @click="eliminarMensaje(mensaje.key)">Borrar</button></td>
-            </tr>
-    </table>  
-
-<!--
-    <h1> LISTAR APT </h1>
+    </div>
+   
+   
+   <!-- <h1> LISTAR APT </h1>
     
     <div>
       <ul>
@@ -97,11 +74,11 @@
            </p>                 
         </li>
       </ul>
-    </div> -->  
+    </div> -->   
   </div>
 </template>
 <script>
-import { namesRef } from "./firebase";
+import { aptRef } from "./firebase";
 
 export default {
 
@@ -121,12 +98,12 @@ export default {
 },
 
     firebase: {
-    names: namesRef,
+    apt: aptRef,
     },
     
   methods: {
     submitName() {
-      namesRef.push({
+      aptRef.push({
         id: this.id,
         supervisor: this.supervisor,
         fecha: this.fecha,
@@ -141,17 +118,17 @@ export default {
       this.name = "";
     },
     removeName(key) {
-      namesRef.child(key).remove();
+      aptRef.child(key).remove();
     },
     setEditName(key) {
-      namesRef.child(key).update({ edit: true });
+      aptRef.child(key).update({ edit: true });
     },
     cancelEdit(key) {
-      namesRef.child(key).update({ edit: false });
+      aptRef.child(key).update({ edit: false });
     },
     saveEditName(name) {
       const key = name[".key"];
-      namesRef.child(key).set({
+      aptRef.child(key).set({
         name: person.name,
         edit: false
       });
@@ -160,22 +137,90 @@ export default {
 };
 </script>
 <style>
-table {
-  border: 1px solid black;
-  height: 1%;
-  text-align: left;
-  overflow-x: auto;
-}
-th,
-td {
-  padding: 2%px;
-  text-align: left;
-  border-bottom: 1px solid rgb(0, 5, 4);
-}
-tr:nth-child(even) {
-  background-color: #dbeaeb;
-}
-div {
-  overflow-x: auto;
-}
+form{
+
+    
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #119164;
+    align-self: auto;
+    margin-top: 2px;
+    
+  }
+  input {
+    animation-duration: 0.3s;
+    animation-name: slideinSelectCategoriaRiesgo;
+    margin:  1px 10px 10px 10px;
+    background-color: #e94444;
+    border: 2px solid #14cbaf;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #e5e9e8;
+    font-size: 18px;
+
+  
+    text-align-last: center;
+    
+  }
+   @keyframes slideinSelectCategoriaRiesgo {
+    from {
+      margin-left:200px;
+      width: 75%;
+       background-color: #e94444;
+        border: 8px solid #14cbaf;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+      background-color: #e94444;
+        border: 8px solid #14cbaf;
+    }
+  }
+ button.n{
+  
+  
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: #ffffff;
+  
+    position:fixed;
+        top: 50%;
+        left: 40%;
+        width: 10%;
+        height:10%;
+        background-color: #e94444;
+        border: 8px solid #14cbaf;
+        font-size: 12px;
+    
+      animation-duration: 2s;
+      animation-name: slideBtnFijo1;
+    }
+    
+    @keyframes slideBtnFijo1 {
+      from {
+        margin-top:100%;
+        left:1%;
+      }
+      10% {
+        font-size: 65px;
+        margin-left: 1%;
+        background-color: rgb(143, 83, 16);
+      }
+      20% {
+        font-size: 20px;
+        margin-left: 1%;
+        background-color: rgb(252, 252, 252);
+      }
+      50% {
+        font-size: 65px;
+        margin-left: 1%;
+        background-color: rgb(253, 252, 250);
+      }
+    
+      to {
+        top: 1%;
+        left: 40%;
+        width: 10%;
+        height: 10%;
+        background-color: rgb(231, 231, 231);
+      }
+    }
 </style>
