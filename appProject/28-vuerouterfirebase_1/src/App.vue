@@ -8,6 +8,7 @@
         <router-link to="/lista">Lista</router-link>
         <router-link to="/listafuera">Listafuera</router-link>
         <router-link to="/formulario">Formulario</router-link>
+        <router-link to="/listarzona">Listar Zona</router-link>
         <hr>
         <router-view></router-view>
     </section>
