@@ -2,9 +2,12 @@
    <div id="app">
     <div>
       <form>    
-        
+    <!-- Based on the example of VUE events, from the video 
+    https://wmedia.teachable.com/courses/140226/lectures/2073523 
+    in the minute 07:00. With the property v-on: keyup.enter = "submitName ()" 
+    when pressing enter we do the same as pressing the send button.  --> 
     <h1> FORMULARIO TABLA NAME
-      <button @click="submitName()">Add</button> </h1>               
+      <button @click="submitName()" v-on:keyup.enter="submitName()" >Add</button> </h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control"/>

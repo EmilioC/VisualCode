@@ -81,7 +81,7 @@
           Remove</button></td>
             </tr>
     </table>  
-    
+
     <h1> TABLA NAMES </h1>   
 <table class="table1">
         <thead>
@@ -96,7 +96,7 @@
             <th>Causa</th>
         </thead >
             <tr v-for="mensaje of names"
-        v-bind:key="mensaje['.key']" >
+                v-bind:key="mensaje['.key']" >
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.id }} </td>
                 <td> {{ mensaje.descripcion }} </td>
@@ -141,8 +141,7 @@
 import { namesRef } from "./firebase";
 
 export default {
-
-    data() {
+  data() {
     return {
       id: null,
       supervisor: "JA",
@@ -153,14 +152,14 @@ export default {
       category: "Riesgo tropezar o caer",
       photo: "si",
       aprendizaje: "Responsabilidad equipos en buen estado",
-      causes: "Reducción probabilidad de accidente",
-    };      
-},
+      causes: "Reducción probabilidad de accidente"
+    };
+  },
 
-    firebase: {
-    names: namesRef,
-    },
-    
+  firebase: {
+    names: namesRef
+  },
+
   methods: {
     submitName() {
       namesRef.push({
@@ -200,7 +199,7 @@ export default {
 table {
   border: 1px solid black;
   height: 1%;
-  text-align: left;
+  text-align: center;
   overflow-x: auto;
 }
 th,
