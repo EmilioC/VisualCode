@@ -49,7 +49,12 @@
     </div> -->
 
 <h1>TABLA APT - En Firebase /apt </h1>
-               
+   <!-- Ojo¡¡ the instance of the firebase in this case is "apt"
+   You can find the how create the new object in:
+    firebase: {
+    apt: aptRef
+  },
+  -->           
 <table class="table1">
         <thead>
             <th>FECHA</th>
@@ -62,7 +67,8 @@
             <th>Foto</th>
             <th>Causa</th>
         </thead >
-            <tr v-for="(mensaje, index) in apt" :key="index" >
+             <tr v-for="mensaje of apt"
+        v-bind:key="mensaje['.key']" >
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.id }} </td>
                 <td> {{ mensaje.descripcion }} </td>
@@ -72,7 +78,8 @@
                 <td> {{ mensaje.photo }} </td>
                 <td> {{ mensaje.aprendizaje }} </td>
                 <td> {{ mensaje.causes }} </td>
-                <td> <button @click="eliminarMensaje(mensaje.key)">Borrar</button></td>
+                <td> <button @click="removeName(mensaje['.key'])">
+          Remove</button></td>
             </tr>
     </table>   
 <!--

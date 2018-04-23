@@ -48,6 +48,41 @@
                 </form>
                 <hr>
     </div>-->
+
+
+    <!-- Example with index in v-for -->
+<h1> Example with index in v-for </h1>   
+<table class="table1">
+        <thead>
+            <th>Nº</th>
+            <th>FECHA</th>
+            <th>ID</th>
+            <th>Aprendizaje</th>
+            <th>Descripcion</th>
+            <th>Accion</th>
+            <th>Tipo APT</th>
+            <th>Categoría</th>
+            <th>Foto</th>
+            <th>Causa</th>
+        </thead >
+            <tr v-for="(mensaje, index) of names"
+        v-bind:key="mensaje['.key']" >
+                <td> {{ index }} </td>
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.id }} </td>
+                <td> {{ mensaje.descripcion }} </td>
+                <td> {{ mensaje.accion }} </td>
+                <td> {{ mensaje.typeAPT }} </td>
+                <td> {{ mensaje.category }} </td>
+                <td> {{ mensaje.photo }} </td>
+                <td> {{ mensaje.aprendizaje }} </td>
+                <td> {{ mensaje.causes }} </td>
+                <td> <button @click="removeName(mensaje['.key'])">
+          Remove</button></td>
+            </tr>
+    </table>  
+    
+    <h1> TABLA NAMES </h1>   
 <table class="table1">
         <thead>
             <th>FECHA</th>
@@ -60,7 +95,8 @@
             <th>Foto</th>
             <th>Causa</th>
         </thead >
-            <tr v-for="(mensaje, index) in names" :key="index" >
+            <tr v-for="mensaje of names"
+        v-bind:key="mensaje['.key']" >
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.id }} </td>
                 <td> {{ mensaje.descripcion }} </td>
@@ -70,7 +106,8 @@
                 <td> {{ mensaje.photo }} </td>
                 <td> {{ mensaje.aprendizaje }} </td>
                 <td> {{ mensaje.causes }} </td>
-                <td> <button @click="eliminarMensaje(mensaje.key)">Borrar</button></td>
+                <td> <button @click="removeName(mensaje['.key'])">
+          Remove</button></td>
             </tr>
     </table>  
 
