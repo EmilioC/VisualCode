@@ -5,6 +5,7 @@ import Listafuera from './Listafuera.vue';
 import Formulario from './Formulario.vue';
 import Listarzona from './ListarZona.vue';
 import FormularioApt from './FormularioApt.vue';
+import Resumen1 from './Resumen1.vue';
 
 
 
@@ -16,4 +17,5 @@ export const routes = [
     {path: '/formulario', component: Formulario},
     {path: '/listarzona', component: Listarzona},
     {path: '/formularioapt', component: FormularioApt},
+    {path: '/resumen1', component: Resumen1},
 ];
