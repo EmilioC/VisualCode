@@ -89,7 +89,7 @@ export default {
       fecha: "20/04/2018",
       descripcion: "Material dentro del recinto",
       accion: "Retirada del material",
-      typeAPT: "Comportamiento",
+      typeAPT: "Condición",
       category: "Riesgo tropezar o caer",
       photo: "si",
       aprendizaje: "Responsabilidad equipos en buen estado",
