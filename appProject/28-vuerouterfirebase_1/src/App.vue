@@ -11,6 +11,7 @@
         <router-link to="/listarzona">Lista tabla APT</router-link>
         <router-link to="/formularioapt">Formulario APT</router-link>
         <router-link to="/resumen1">Resumen 1</router-link>
+        <router-link to="/boton1"> Piso Carboneras</router-link>
         <hr>
         <router-view></router-view>
     </section>
