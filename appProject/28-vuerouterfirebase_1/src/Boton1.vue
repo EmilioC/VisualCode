@@ -1,7 +1,7 @@
 <template>
    <div id="app">
-  <div>
-      <form>            
+ <!-- <div class="formularioabajo">
+      <form >            
    <h1> DATOS: basedatos-ccc9b/apt</h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
@@ -54,19 +54,18 @@
     firebase: {
     apt: aptRef
   },
-  -->           
+            
 <table class="table1">
         <thead>
             <th>FECHA</th>
             <th>ID</th>
             <th>Aprendizaje</th>
             <th>Descripcion</th>
-           <!-- <th>Accion</th>
+           <th>Accion</th>
             <th>Tipo APT</th>
             <th>Categoría</th>
             <th>Foto</th>
-            <th>Causa</th> -->  
-
+            <th>Causa</th>  
 
             <th>FECHA</th>
             <th>ID</th>
@@ -83,21 +82,79 @@
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.id }} </td>
                 <td> {{ mensaje.descripcion }} </td>
-                <!-- <td> {{ mensaje.accion }} </td>
+                <td> {{ mensaje.accion }} </td>
                 <td> {{ mensaje.typeAPT }} </td>
                 <td> {{ mensaje.category }} </td>
                 <td> {{ mensaje.photo }} </td>
                 <td> {{ mensaje.aprendizaje }} </td>
-                <td> {{ mensaje.causes }} </td>-->
+                <td> {{ mensaje.causes }} 
                 <td> <button @click="removeName(mensaje['.key'])">
           Remove</button></td>
             </tr>
-    </table>   
-    <table class="tablabton1">
+    </table> -->    
+    <table class="tablabtn1">        
         <thead>
-            <th>FECHA</th>
+            <th>
+                <div class="form_group">
+                    <label for="id">ID    T1</label>
+                    <input v-model="fecha" type="text" class="form-control"/>
+                </div>
+            </th>
+            <th>
+                <div class="form_group">
+                    <label for="aprendizaje">Comprendí</label>
+                    <input v-model="id" type="text" class="form-control"/>
+                </div>
+            </th>
+            <th>
+                <div class="form_group">
+                    <label for="id">fecha</label>
+                    <input v-model="aprendizaje" type="text" class="form-control"/>
+                </div>
+            </th>
+            <div>
+                <th>
+                <button @click="submitName()">Add</button> 
+                </th>               
+
+            </div>
+           <!-- <th>Aprendizaje</th>
             <th>ID</th>
-            <th>Aprendizaje</th>
+            <th>Remove</th>
+            <th>ADD</th>
+            <th>Descripcion</th>
+            <th>Accion</th>
+            <th>Tipo APT</th>
+            <th>Categoría</th>
+            <th>Foto</th>
+            <th>Causa</th>-->             
+        </thead >
+             <tr v-for="mensaje of apt"
+        v-bind:key="mensaje['.key']" >
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.id }} </td>
+              <!--  <td> {{ mensaje.descripcion }} </td>
+                <td> {{ mensaje.accion }} </td>
+                <td> {{ mensaje.typeAPT }} </td>
+                <td> {{ mensaje.category }} </td>
+                <td> {{ mensaje.photo }} </td>
+                <td> {{ mensaje.aprendizaje }} </td>
+                <td> {{ mensaje.causes }} </td>--> 
+                <td> <button @click="removeName(mensaje['.key'])">
+          Remove</button></td>
+
+          
+            </tr>
+    </table>   
+
+<!-- TABLA DERECHA -->
+
+
+ <table class="tablabton2">
+        <thead >
+            <th class="cabecera1"> T 2</th>
+            <th class="cabecera1">ID</th>
+            <th class="cabecera1">Aprendizaje</th>
             <!--<th>Descripcion</th>
             <th>Accion</th>
             <th>Tipo APT</th>
@@ -163,9 +220,60 @@
       
                 </form>
           </td>
+
+<td><form> 
+     <button @click="submitName()">Add</button>       
+                 
+            <!--     <div class="form_group">
+                    <label for="id">ID</label>
+                    <input v-model="id" type="text" class="form-control"/>
+                </div>
+             <div class="form_group">
+                    <label for="idsupervisor">SUPERVISOR</label>
+                    <input type="text" class="form-control" v-model="supervisor" />
+                </div>        
+                <div class="form_group">
+                    <label for="fecha">FECHA</label>
+                    <input type="text" class="form-control" v-model="fecha" />
+                </div>
+                <div class="form_group">
+                    <label for="descriptionAPT">DESCRIPCIÓN</label>
+                    <input type="text" class="form-control" v-model="descripcion" />
+                </div>
+                <div class="form_group">
+                    <label for="actionAPT">ACCIÓN TOMADA</label>
+                    <input type="text" class="form-control" v-model="accion" />
+                </div>
+                <div class="form_group">
+                    <label for="typeAPT">TIPO APT</label>
+                    <input type="text" class="form-control" v-model="typeAPT" />
+                </div>
+                <div class="form_group">
+                    <label for="category">CATEGORÍA APT</label>
+                    <input type="text" class="form-control" v-model="category" />
+                </div>
+                <div class="form_group">
+                    <label for="photoAPT">FOTO</label>
+                    <input type="text" class="form-control" v-model="photo" />
+                </div>
+                <div class="form_group">
+                    <label for="learningAPT">APRENDIZAJE</label>
+                    <input type="text" class="form-control" v-model="aprendizaje" />
+                </div>
+                <div class="form_group">
+                    <label for="causes">EFECTO EN LA INSTALACIÓN</label>
+                </div>--> 
+      
+                </form>
+          </td>
+          
             </tr>
     </table>   
 <!--
+    <h1> LISTAR APT </h1>
+
+
+
     <h1> LISTAR APT </h1>
     
     <div>
@@ -252,23 +360,89 @@ export default {
 <style>
 /*TEST BOTON IN SCREEN 1*/
 
-table.tablabton1 {
+div.formularioabajo {
+  top: 230%;
+}
+
+table.tablabtn1 {
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   color: #ffffff;
 
+  /**position: fixed;**/
+  top: 30%;
+  left: 40%;
+  width: 30%;
+  height: 30%;
+  background-color: #5878ca;
+  border: 8px solid #889ccf;
+  font-size: 20px;
+  /** EXAMPLE BORDER OF STYLE IN:
+        appProject/20180320_APT/pruebatablas.html**/
+  border-radius: 35px 0px 35px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+  border: 2px solid #5878ca 2px solid #5878ca;
+
+  animation-duration: 2s;
+  animation-name: slideBtnFijo1;
+        display:scroll;
+        position:fixed;
+        bottom:320px;
+        right:0px;
+        overflow-y: hidden;
+    overflow: auto;
+
+
+}
+
+@keyframes slideBtnFijo1 {
+  from {
+    margin-top: 100%;
+    left: 1%;
+  }
+  10% {
+    font-size: 65px;
+    margin-left: 1%;
+    background-color: rgb(143, 83, 16);
+  }
+  20% {
+    font-size: 20px;
+    margin-left: 1%;
+    background-color: rgb(143, 83, 16);
+  }
+  50% {
+    font-size: 65px;
+    margin-left: 1%;
+    background-color: rgb(143, 83, 16);
+  }
+
+  to {
+    top: 1%;
+    left: 30%;
+    width: 10%;
+    height: 10%;
+    background-color: blue;
+  }
+}
+
+.tablabton2 {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: #232500;
+  size: 20px;
+
   position: fixed;
-  top: 1%;
-  left: 30%;
+  top: 200px;
+  left: 1%;
   width: 10%;
   height: 10%;
-  background-color: #5878ca;
+  background-color: #b3b962;
   border: 8px solid #889ccf;
   font-size: 12px;
   /** EXAMPLE BORDER OF STYLE IN:
         appProject/20180320_APT/pruebatablas.html**/
   border-radius: 35px 0px 35px 0px;
   -moz-border-radius: 35px 0px 35px 0px;
-  -webkit-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 200px 200px 35px 200px;
   border: 2px solid #5878ca 2px solid #5878ca;
 
   animation-duration: 2s;
@@ -305,6 +479,116 @@ table.tablabton1 {
   }
 }
 
+input.inputlearningAPT {
+  width: 200px;
+}
+
+td {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: #ffffff;
+
+  /**position: fixed;
+  top: 10%;
+  left: 1%;
+  width: 10%;
+  height: 10%;*/
+  background-color: #727786;
+  border: 8px solid #889ccf;
+  /** EXAMPLE BORDER OF STYLE IN:
+        appProject/20180320_APT/pruebatablas.html**/
+  border-radius: 35px 0px 35px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 2px solid #5878ca 2px solid #5878ca;
+  /**
+  animation-duration: 2s;
+  animation-name: slideBtnFijo1;**/
+}
+
+@keyframes slideBtnFijo1 {
+  from {
+    margin-top: 100%;
+    left: 1%;
+  }
+  10% {
+    font-size: 65px;
+    margin-left: 1%;
+    background-color: rgb(143, 83, 16);
+  }
+  20% {
+    font-size: 20px;
+    margin-left: 1%;
+    background-color: rgb(143, 83, 16);
+  }
+  50% {
+    font-size: 65px;
+    margin-left: 1%;
+    background-color: rgb(197, 192, 185);
+  }
+
+  to {
+    top: 1%;
+    left: 30%;
+    width: 10%;
+    height: 10%;
+    background-color: rgb(236, 236, 240);
+  }
+}
+
+th.cabecera1 {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: #e71313;
+  font-size: 40px;
+
+  /**position: fixed;
+  top: 10%;
+  left: 1%;
+  width: 10%;
+  height: 10%;*/
+  background-color: #727786;
+  border: 8px solid #889ccf;
+  font-size: 12px;
+  /** EXAMPLE BORDER OF STYLE IN:
+        appProject/20180320_APT/pruebatablas.html**/
+  border-radius: 35px 0px 35px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 2px solid #5878ca 2px solid #5878ca;
+
+  animation-duration: 0.5s;
+  animation-name: slideBtnFijo1;
+}
+
+@keyframes slideBtnFijo1 {
+  from {
+    margin-top: 100%;
+    left: 1%;
+  }
+  10% {
+    font-size: 65px;
+    margin-left: 1%;
+    background-color: rgb(143, 83, 16);
+  }
+  20% {
+    font-size: 20px;
+    margin-left: 1%;
+    background-color: rgb(143, 83, 16);
+  }
+  50% {
+    font-size: 65px;
+    margin-left: 1%;
+    background-color: rgb(197, 192, 185);
+  }
+
+  to {
+    top: 1%;
+    left: 30%;
+    width: 10%;
+    height: 10%;
+    background-color: rgb(236, 236, 240);
+  }
+}
+
 table {
   border: 1px solid black;
   height: 1%;
@@ -331,7 +615,6 @@ form {
   border-radius: 10px;
   border-bottom: 2%;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  color: #ffffff;
 }
 
 input {
