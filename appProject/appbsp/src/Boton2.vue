@@ -536,13 +536,6 @@
     </table>   
 </div> 
 
-
-
-
-
-
-
-
   </div>
 </template>
 <script>
@@ -604,90 +597,7 @@ export default {
 };
 </script>
 <style>
-    
-div.formulario1 {
-    float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
- div.formulario2 {
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario3 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario4 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario5 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario6 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario7 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario8 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario9 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.formulario10 {   
-     float: left;
-    border: 11px solid rgb(188, 218, 218);
-}
-div.tabla1 {   
-    width: 100%;
-    height: 1%;
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-}
-div.tabla2 {   
-    width: 100%;
-    height: 1%;
-    background-color: rgb(255, 6, 6);
-    color: rgb(126, 86, 86);
-}
-
-th{
-    border: 0px;
-    float: left;
-    background-color: rgb(0, 255, 255);
-    padding: 10 2px 2px 30px;
-}
-td{
-    background-color: rgb(170, 208, 240);
-    padding: 11px solids 1px 1px 1px 1px;
-    float: left;
-}
-.serieV{
-    background-color: rgb(102, 202, 216);
-    padding: 10 2px 2px 1px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(111, 161, 184);
-    -webkit-animation: mymove1 0.5s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymove1 8s infinite;
-    border-bottom: double;
-    
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes mymove1 {
-    50% {box-shadow: 5px 2px 30px rgb(165, 246, 246);}
-}
-
-@keyframes mymove {
-    50% {box-shadow: 50px 10px 30px 200px rgb(166, 199, 197);}
-}
+ 
 
 
 .grid-container {
@@ -707,7 +617,7 @@ td{
 .grid-container1 {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  background-color: rgb(8, 13, 39);
+  background-color: rgb(211, 168, 12);
   padding: 10px;
 }
 .grid-item1 {
