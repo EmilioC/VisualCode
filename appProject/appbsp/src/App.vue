@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img src="./assets/logo.png">
 <section>
         <router-link to="/listafuera">Lista tabla NAME</router-link>
         <router-link to="/formulario">Formulario NAME</router-link>
@@ -12,9 +13,7 @@
         <router-view></router-view>
     </section>
 
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -26,11 +25,16 @@
 </template>
 
 <script>
+
+
 export default {
+  
 }
 </script>
 
 <style>
+
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
