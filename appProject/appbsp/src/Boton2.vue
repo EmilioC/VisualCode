@@ -1142,7 +1142,7 @@ export default {
     }
   }
 };
-</script>
+</script lan>
 <style>
 .grid-container {
   display: grid;

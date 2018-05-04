@@ -155,24 +155,24 @@
             <th class="cabecera1"> T 2</th>
             <th class="cabecera1">ID</th>
             <th class="cabecera1">Aprendizaje</th>
-            <!--<th>Descripcion</th>
+            <th>Descripcion</th>
             <th>Accion</th>
             <th>Tipo APT</th>
             <th>Categoría</th>
             <th>Foto</th>
-            <th>Causa</th>-->             
+            <th>Causa</th>           
         </thead >
              <tr v-for="mensaje of apt"
         v-bind:key="mensaje['.key']" >
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.id }} </td>
                 <td> {{ mensaje.descripcion }} </td>
-               <!-- <td> {{ mensaje.accion }} </td>
+                <td> {{ mensaje.accion }} </td>
                 <td> {{ mensaje.typeAPT }} </td>
                 <td> {{ mensaje.category }} </td>
                 <td> {{ mensaje.photo }} </td>
                 <td> {{ mensaje.aprendizaje }} </td>
-                <td> {{ mensaje.causes }} </td>--> 
+                <td> {{ mensaje.causes }} </td>
                 <td> <button @click="removeName(mensaje['.key'])">
           Remove</button></td>
 <td><form> 

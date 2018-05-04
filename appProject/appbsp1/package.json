@@ -1,6 +1,6 @@
 {
-  "name": "appbsp",
-  "description": "Safety first",
+  "name": "appbsp1",
+  "description": "Test with grid ",
   "version": "1.0.0",
   "author": "EmilioC <emicorgul@gmail.com>",
   "license": "MIT",
@@ -10,8 +10,6 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "bootstrap-vue": "^2.0.0-rc.9",
-    "dotenv": "^5.0.1",
     "firebase": "^4.13.1",
     "vue": "^2.5.11",
     "vue-router": "^3.0.1",
