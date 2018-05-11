@@ -6,6 +6,7 @@
       <form>    
         
     <h1> FORMULARIO TABLA APT
+      
       <button @click="submitName()">Add</button> </h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
