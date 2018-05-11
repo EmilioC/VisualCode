@@ -1,6 +1,7 @@
 <template>
 
    <div id="app" >
+     <header><h3>Hola que tal </h3></header>
 
 <div class="grid-container3">
     <div >
@@ -38,7 +39,7 @@
     </div>
     </div> 
 
-
+<!--
 <div class="grid-container">
   <div class="grid-item">
        <div class="formulario1">
@@ -151,11 +152,12 @@
     </div>  
 
   </div>
-</div>  
+</div> -->  
 <!--  consult table for "Id" data -->   
  <div class="grid-container2">
     <div>
       <ul>
+        <h6>C2</h6>
         <li v-for="personName of apt"
         v-bind:key="personName['.key']">        
           <p>
@@ -256,13 +258,13 @@ export default {
 }
 
 .grid-container2 {
-   position: relative;
-    bottom: 0;
-    left: 10px;
-   
-    border: 3px solid #73AD21;
-    width: 30rem;
-    height: 8rem;
+  position: sticky;
+    top: 0;
+    left: 15em;
+    background-color: rgb(133, 194, 133);
+    border: 2px solid #4CAF50;
+    width: 10em;
+    font-size: 0.70em;
 }
 .grid-item2 {
   background-color: rgb(255, 255, 255);
@@ -272,20 +274,22 @@ export default {
 }
 .grid-container3 {
    
-    position: sticky;
+    position:  sticky;
     top: 0;
     background-color: rgb(133, 194, 133);
     border: 2px solid #4CAF50;
     width: 10em;
+    font-size: 0.70em;
 }
 .grid-container4 {
    
     position: sticky;
-    left: 11em;
-    top: 0;
+    left: 15em;
+    top: 0em;
     background-color: rgb(194, 185, 133);
     border: 2px solid #4CAF50;
     width: 10em;
+    z-index: -1;
 }
 
 
