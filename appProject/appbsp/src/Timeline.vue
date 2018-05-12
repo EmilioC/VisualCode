@@ -2,7 +2,7 @@
    <div id="app">
     <div>
       <form>            
-    <h4> FORMULARIO TABLA APT </h4>          
+    <h5> Formulario </h5>          
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control" required autofocus="autofocus"/>
@@ -36,10 +36,10 @@
                 </div>
                 <div class="form_group">                    
                     <select name="categoria" size="2">
-                    <option selected>Salpicadura/Espray </option>
-                    <option>checked>Ser golpeado por algo</option>
-                    <option>Peligro de quemadura  </option>
-                    <option>Exposición a producto químico</option>
+                    <option value="Salpicadura/Espray" selected>Salpicadura/Espray </option>
+                    <option value="Ser golpeado por algo" >checked>Ser golpeado por algo</option>
+                    <option value="Peligro de quemadura">Peligro de quemadura  </option>
+                    <option value="Exposición a producto químico">Exposición a producto químico</option>
                     <option>Peligro en la conducción</option> 
                     <option>Peligro Electrico</option>
                     <option>Medio Ambiente</option>
@@ -72,44 +72,7 @@
                     <option>Incumple otras normas/procedimentos</option>
                         
                     </select>
-
-                    <!--
-                    <label for="category">CATEGORÍA APT</label>
-                    <input type="text" class="form-control" v-model="category" required />
-                    <input type="radio" name="transporte" value="1">Salpicadura/Espray 
-                    <input type="radio" name="transporte" value="2" checked>Ser golpeado por algo
-                    <input type="radio" name="transporte" value="3">Peligro de quemadura  
-                    <input type="radio" name="transporte" value="3">Exposición a producto químico
-                    <input type="radio" name="transporte" value="3">Peligro en la conducción 
-                    <input type="radio" name="transporte" value="3">Peligro Electrico
-                    <input type="radio" name="transporte" value="3">Medio Ambiente
-                    <input type="radio" name="transporte" value="3">Equipos/Herramientas - Condición 
-                    <input type="radio" name="transporte" value="3">Equipos/Herramientas - Utilización 
-                    <input type="radio" name="transporte" value="3">Caída desde altura/Elevación
-                    <input type="radio" name="transporte" value="3">Peligro de Incendio/Fuego
-                    <input type="radio" name="transporte" value="3">Orden y Limpieza
-                    <input type="radio" name="transporte" value="3">Etiquetas/Señalización    
-                    <input type="radio" name="transporte" value="3">Equipos/Herramientas - Utilización
-                    <input type="radio" name="transporte" value="3">Caída desde altura/Elevación
-                    <input type="radio" name="transporte" value="3"> Peligro de Incendio/Fuego
-                    <input type="radio" name="transporte" value="3">Orden y Limpieza
-                    <input type="radio" name="transporte" value="3">Etiquetas/Señalización
-                    <input type="radio" name="transporte" value="3">Peligro de Corte/Laceración
-                    <input type="radio" name="transporte" value="3">Fuga/Derrame de Material
-                    <input type="radio" name="transporte" value="3">Nivel de Ruido
-                    <input type="radio" name="transporte" value="3">Sobreesfuerzo/Ergonomía
-                    <input type="radio" name="transporte" value="3">Atención a la tarea
-                    <input type="radio" name="transporte" value="3">Fatiga/Cansancio
-                    <input type="radio" name="transporte" value="3">EPIs - Ojos
-                    <input type="radio" name="transporte" value="3">EPIs - Manos
-                    <input type="radio" name="transporte" value="3">EPIs - Oídos
-                    <input type="radio" name="transporte" value="3">EPIs - Otros                 
-                    <input type="radio" name="transporte" value="3">Atrapamientos                 
-                    <input type="radio" name="transporte" value="3">Mal uso productos
-                    <input type="radio" name="transporte" value="3">Security
-                    <input type="radio" name="transporte" value="3">Resbalar/Tropezar o Caer
-                    <input type="radio" name="transporte" value="3">Mirando por dónde pasa
-                    <input type="radio" name="transporte" value="3">Incumple otras normas/procedimentos -->
+                    
                 </div>
                 <div class="form_group">
                     <label for="photoAPT">FOTO</label>
@@ -119,7 +82,6 @@
                 <button @click="submitName()">Add</button>   
                 </form>
                 <hr>
-
                     <div class="timeline">                  
                   <header class="timeline-header">
                     <span class="tag is-medium is-primary">Start</span>
@@ -157,30 +119,6 @@
                   </div>
 </div>
     </div>   
-   
-   <!-- <h1> LISTAR APT </h1>
-    
-    <div>
-      <ul>
-        <li v-for="personName of names"
-        v-bind:key="personName['.key']">        
-          <p>
-          <button @click="removeName(personName['.key'])">
-          Remove</button>
-          {{personName.id}}
-          {{personName.supervisor}}
-          {{personName.fecha}}
-          {{personName.descripcion}}
-          {{personName.accion}}
-          {{personName.typeAPT}}
-          {{personName.category}}
-          {{personName.photo}}
-          {{personName.aprendizaje}}
-          {{personName.causes}}
-           </p>                 
-        </li>
-      </ul>
-    </div> -->   
   </div>
 </template>
 <script>
