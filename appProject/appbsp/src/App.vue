@@ -17,10 +17,9 @@
         <router-view></router-view>
     </section>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <li><a href="https://www.danielprimo.io/podcast" target="_blank">WR</a></li>
+       <li><a href="https://github.com/EmilioC/VisualCode/tree/master/appProject/appbsp" target="_blank">Git</a></li>
+      
     </ul>
     
   </div>

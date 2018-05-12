@@ -69,8 +69,7 @@
                     <option>Resbalar/Tropezar o Caer</option>
                     <option>Mirando por dónde pasa</option>
                     <option>Incumple otras normas/procedimentos</option>                        
-                    </select>
-                    
+                    </select>                    
                 </div>
                 <div class="form_group">
                     <label for="photoAPT">FOTO</label>
