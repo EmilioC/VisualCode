@@ -28,24 +28,26 @@
                 <td> <button @click="removeName(mensaje['.key'])">
           Remove</button></td>
             </tr>
-    </table>   
-    <hr>
+    </table>       <hr>
 
 <!-- TEST FOR CREATE A TIMELINE WITH DIRECTIVE V-FOR-->
-   
-      <table class="table1">
-        <td v-for="mensaje of apt"
+    <table class="table1">
+        <tr v-for="mensaje of apt"
         v-bind:key="mensaje['.key']" >
-                 
-                <div class="timeline is-centered">                  
+                <td> {{ mensaje.fecha }}
                   <header class="timeline-header">
                     <span class="tag is-medium is-primary">{{ mensaje.fecha }}</span>
+                  </header> </td>
+                <td> {{ mensaje.id }} </td>
+                <div class="timeline is-centered">                  
+                  <header class="timeline-header">
+                    <span class="tag is-medium is-primary">Start</span>
                   </header>
                   <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                      <p class="heading">{{ mensaje.fecha }}</p>
-                      <p> {{ mensaje.descripcion }} </p>
+                      <p class="heading">January 2016</p>
+                      <p>Timeline content - Can include any HTML element</p>
                     </div>
                   </div>
                   <div class="timeline-item">
@@ -53,10 +55,16 @@
                       <img src="http://bulma.io/images/placeholders/32x32.png">
                     </div>
                     <div class="timeline-content">
-                      <p class="heading">{{ mensaje.fecha }}</p>
-                      <p>Timeline content</p>
+                      <p class="heading">February 2016</p>
+                      <p>Timeline content - Can include any HTML element</p>
                     </div>
                   </div>
+                  <header class="timeline-header">
+                    <span class="tag is-primary">2017</span>
+                  </header>
+                  <header class="timeline-header">
+                    <span class="tag is-primary">2017</span>
+                  </header>
                   <header class="timeline-header">
                     <span class="tag is-primary">2017</span>
                   </header>
@@ -71,17 +79,15 @@
                     </div>
                     <div class="timeline-content">
                       <p class="heading">March 2017</p>
-                      <p>Timeline</p>
+                      <p>Timeline content - Can include any HTML element</p>
                     </div>
                   </div>
                   <div class="timeline-header">
                     <span class="tag is-medium is-primary">End</span>
                   </div>
           </div>
-             </td>  
-                
-      </table> 
-   
+            </tr>
+    </table> 
     <!--  START THE TIME LINE-->
                 <hr>
                     <div class="timeline is-centered">                  
