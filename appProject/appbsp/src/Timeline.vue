@@ -35,8 +35,7 @@
    
       <table class="table1">
         <td v-for="mensaje of apt"
-        v-bind:key="mensaje['.key']" >
-                 
+        v-bind:key="mensaje['.key']" >                 
                 <div class="timeline is-centered">                  
                   <header class="timeline-header">
                     <span class="tag is-medium is-primary">{{ mensaje.fecha }}</span>
@@ -46,32 +45,24 @@
                     <div class="timeline-content">
                       <p class="heading">{{ mensaje.fecha }}</p>
                       <p> {{ mensaje.descripcion }} </p>
+                      <p> {{ mensaje.aprendizaje }} </p>
+                      <p> {{ mensaje.causes }} </p>
                     </div>
                   </div>
-                  <div class="timeline-item">
-                    <div class="timeline-marker is-image is-32x32">
-                      <img src="http://bulma.io/images/placeholders/32x32.png">
-                    </div>
+                 <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
                       <p class="heading">{{ mensaje.fecha }}</p>
-                      <p>Timeline content</p>
+                      <p> {{ mensaje.descripcion }} </p>
                     </div>
                   </div>
-                  <header class="timeline-header">
-                    <span class="tag is-primary">2017</span>
-                  </header>
-                  <header class="timeline-header">
-                    <span class="tag is-primary">
-                      <button>botón</button>
-                    </span>
-                  </header>
                   <div class="timeline-item">
                     <div class="timeline-marker is-icon">
                       <i class="fa fa-flag"></i>
                     </div>
                     <div class="timeline-content">
                       <p class="heading">March 2017</p>
-                      <p>Timeline</p>
+                      <p>Icono </p>
                     </div>
                   </div>
                   <div class="timeline-header">
