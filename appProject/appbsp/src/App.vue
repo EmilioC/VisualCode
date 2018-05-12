@@ -5,7 +5,7 @@
         <router-link to="/formularioapt1">Formulario APT1</router-link>
         <router-link to="/listarzona">Lista tabla APT</router-link>
         <router-link to="/timeline"> TIME</router-link>
-        <!--        
+          <!--     
         <router-link to="/listafuera">Lista tabla NAME</router-link>
         <router-link to="/formulario">Formulario NAME</router-link>
         <router-link to="/formularioapt">Formulario APT</router-link>
@@ -13,7 +13,7 @@
         <router-link to="/boton1"> Boton 1</router-link> 
         
         <router-link to="/boton2"> Boton 2</router-link>
-        <router-link to="/codeveloper"> codeveloper</router-link>-->
+        <router-link to="/codeveloper"> codeveloper</router-link> -->
         <hr>
         <router-view></router-view>
     </section>

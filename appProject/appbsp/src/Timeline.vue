@@ -110,57 +110,53 @@
                     <input type="radio" name="transporte" value="3">Resbalar/Tropezar o Caer
                     <input type="radio" name="transporte" value="3">Mirando por dónde pasa
                     <input type="radio" name="transporte" value="3">Incumple otras normas/procedimentos -->
-
                 </div>
                 <div class="form_group">
                     <label for="photoAPT">FOTO</label>
                     <input type="text" class="form-control" v-model="photo" />
-                </div>              
+                </div>           
       
                 <button @click="submitName()">Add</button>   
                 </form>
                 <hr>
 
-                <div>
-                    <div class="timeline">
-  <header class="timeline-header">
-    <span class="tag is-medium is-primary">Start</span>
-  </header>
-  <div class="timeline-item">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-      <p class="heading">January 2016</p>
-      <p>Timeline content - Can include any HTML element</p>
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-marker is-image is-32x32">
-      <img src="http://bulma.io/images/placeholders/32x32.png">
-    </div>
-    <div class="timeline-content">
-      <p class="heading">February 2016</p>
-      <p>Timeline content - Can include any HTML element</p>
-    </div>
-  </div>
-  <header class="timeline-header">
-    <span class="tag is-primary">2017</span>
-  </header>
-  <div class="timeline-item">
-    <div class="timeline-marker is-icon">
-      <i class="fa fa-flag"></i>
-    </div>
-    <div class="timeline-content">
-      <p class="heading">March 2017</p>
-      <p>Timeline content - Can include any HTML element</p>
-    </div>
-  </div>
-  <div class="timeline-header">
-    <span class="tag is-medium is-primary">End</span>
-  </div>
+                    <div class="timeline">                  
+                  <header class="timeline-header">
+                    <span class="tag is-medium is-primary">Start</span>
+                  </header>
+                  <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                      <p class="heading">January 2016</p>
+                      <p>Timeline content - Can include any HTML element</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-marker is-image is-32x32">
+                      <img src="http://bulma.io/images/placeholders/32x32.png">
+                    </div>
+                    <div class="timeline-content">
+                      <p class="heading">February 2016</p>
+                      <p>Timeline content - Can include any HTML element</p>
+                    </div>
+                  </div>
+                  <header class="timeline-header">
+                    <span class="tag is-primary">2017</span>
+                  </header>
+                  <div class="timeline-item">
+                    <div class="timeline-marker is-icon">
+                      <i class="fa fa-flag"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <p class="heading">March 2017</p>
+                      <p>Timeline content - Can include any HTML element</p>
+                    </div>
+                  </div>
+                  <div class="timeline-header">
+                    <span class="tag is-medium is-primary">End</span>
+                  </div>
 </div>
-                </div>
-    </div>
-   
+    </div>   
    
    <!-- <h1> LISTAR APT </h1>
     
@@ -191,8 +187,7 @@
 import { aptRef } from "./firebase";
 
 export default {
-
-    data() {
+  data() {
     return {
       id: null,
       supervisor: null,
@@ -201,15 +196,15 @@ export default {
       accion: null,
       typeAPT: null,
       category: null,
-      photo: null,
-    };  
-    mydate: '2017-07-04'    
-},
+      photo: null
+    };
+    mydate: "2017-07-04";
+  },
 
-    firebase: {
-    apt: aptRef,
-    },
-    
+  firebase: {
+    apt: aptRef
+  },
+
   methods: {
     submitName() {
       aptRef.push({
@@ -220,7 +215,7 @@ export default {
         accion: this.accion,
         typeAPT: this.typeAPT,
         category: this.category,
-        photo: this.photo,
+        photo: this.photo
       });
       this.name = "";
     },
@@ -243,6 +238,7 @@ export default {
   }
 };
 </script>
-<style>
-
+<style lang="css">
+    @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
+    @import '/node_modules/bulma/css/bulma.min.css';
 </style>

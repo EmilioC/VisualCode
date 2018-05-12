@@ -204,6 +204,7 @@ export default {
   }
 };
 </script>
-<style>
-
+<style lang="css">
+    @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
+    @import '/node_modules/bulma/css/bulma.min.css';
 </style>
