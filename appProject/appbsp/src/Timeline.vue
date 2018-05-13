@@ -1,45 +1,46 @@
 <template>
-
    <div id="app">   
-      <table class="table1">
-        <td v-for="mensaje of apt"
+       <div><table class="table1">
+       <td v-for="mensaje of apt"
         v-bind:key="mensaje['.key']" >                 
-                <th><div class="timeline is-rtl">                  
-                  <header class="timeline-header">
-                    <span class="tag is-medium is-primary">{{ mensaje.fecha }}</span>
-                  </header>
-                  <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                      <p class="heading">{{ mensaje.typeAPT}}</p>
-                      <p class="heading"> {{ mensaje.category }} </p>
-                    </div>
-                  </div>
-                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                      <p class="heading">{{ mensaje.fecha }}</p>
-                      <p> {{ mensaje.descripcion }} </p>
-                    </div>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="timeline-marker is-icon">
-                      
-                    </div>
-                    <div class="timeline-content">
-                      <p class="heading">March 2017</p>
-                      <p>Icono </p>
-                    </div>
-                  </div>
-                  <div class="timeline-header">
-                    <span class="tag is-medium is-primary">End</span>
-                  </div>
-          </div>
-          </th>
-        </td>  
+               <div class="timeline is-rtl">
+              <header class="timeline-header">
+                <span class="tag is-medium is-primary">
+                  {{ mensaje.fecha }}
+                </span>
+              </header>
+              <div class="timeline-item is-primary">
+                <div class="timeline-marker is-primary"></div>
+                <div class="timeline-content">
+                  <p class="heading">{{ mensaje.typeAPT }}</p>
+                </div>
+              </div>
+               <div class="timeline-item is-primary">
+                <div class="timeline-marker is-primary"></div>
+                <div class="timeline-content">
+                  <p class="heading">{{ mensaje.category }}</p>
+                </div>
+              </div>
+               <div class="timeline-item is-primary">
+                <div class="timeline-marker is-primary"></div>
+                <div class="timeline-content">
+                  <p class="heading">{{ mensaje.descripcion }}</p>
+                </div>
+              </div>
+              <div class="timeline-item is-primary">
+                <div class="timeline-marker is-primary"></div>
+                <div class="timeline-content">
+                  <p class="heading">{{ mensaje.accion }}</p>
+                </div>
                 
-      </table> 
-   
+              </div>
+             
+              <header class="timeline-header">
+                <span class="tag is-medium is-primary">End</span>
+              </header>
+            </div>
+        </td>                 
+      </table> </div>    
     </div>   
 </template>
 <script>
