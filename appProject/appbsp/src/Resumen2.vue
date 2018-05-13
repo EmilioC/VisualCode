@@ -1,33 +1,51 @@
 <template>
    <div id="app">
 
+<p id="calculo">-</p>
 
-    <h1> ordenrando por fecha</h1>   
-<table class="table1">
+<h1>RESUMEN 1 - Filter and ordering by date </h1>
+     <table class="table3">
         <thead>
             <th>FECHA</th>
-            <th>ID</th>
-            <th>Aprendizaje</th>
-            <th>Descripcion</th>
-            <th>Accion</th>
-            <th>Tipo APT</th>
-            <th>Categoría</th>
-            <th>Foto</th>
-            <th>Causa</th>
+            <th>V</th>
         </thead >
-            <tr v-for="mensaje of names"
-                v-bind:key="mensaje['.key']" >
+             <tr v-for="mensaje of apt"
+        v-bind:key="mensaje['.key']" >
+                <td > {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.fecha | upper }} </td>
+                <td>    <p id="dia"></p> </td>
+                <td>    <p id="hora"></p> </td>
+                <td>    <p id="minutos"></p> </td>
+                <td>    <p id="año"></p> </td>
+                <td>    <p id="calculo">-</p> </td>
+                <td>    <p id="calculo">-</p> </td>
+                <td> <button @click="removeName(mensaje['.key'])">
+          Remove</button></td>
+          <td> <button @click="darHora()">
+          hora</button></td>
+          <td> <button @click="ordenar()">
+          ordenar</button></td>
+
+            </tr>
+    </table>   
+    <hr>
+
+    <h1>RESUMEN 1 - Filter and ordering by date </h1>
+     <table class="table1">
+        <thead>
+            <th>FECHA</th>
+        </thead >
+             <tr v-for="mensaje of apt"
+        v-bind:key="mensaje['.key']" >
                 <td> {{ mensaje.fecha }} </td>
                 <td> <button @click="removeName(mensaje['.key'])">
           Remove</button></td>
             </tr>
-    </table> 
-
-
-    <!-- <div>
-      <form>    
-        
-   <h1> LISTA FUERA DE DIRECTORIO COMPONENTS </h1>               
+    </table>   
+    <hr>
+  <!-- <div>
+      <form>            
+   <h1> DATOS: basedatos-ccc9b/apt</h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="form-control"/>
@@ -71,14 +89,17 @@
       <button @click="submitName()">Add</button>
                 </form>
                 <hr>
-    </div>-->
+    </div> -->
 
-
-    <!-- Example with index in v-for -->
-<h1> Example with index in v-for </h1>   
+<h1>RESUMEN 1 (Firebase /apt ) </h1>
+   <!-- Ojo¡¡ the instance of the firebase in this case is "apt"
+   You can find the how create the new object in:
+    firebase: {
+    apt: aptRef
+  },
+  -->           
 <table class="table1">
         <thead>
-            <th>Nº</th>
             <th>FECHA</th>
             <th>ID</th>
             <th>Aprendizaje</th>
@@ -89,9 +110,8 @@
             <th>Foto</th>
             <th>Causa</th>
         </thead >
-            <tr v-for="(mensaje, index) of names"
+             <tr v-for="mensaje of aptFecha"
         v-bind:key="mensaje['.key']" >
-                <td> {{ index }} </td>
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.id }} </td>
                 <td> {{ mensaje.descripcion }} </td>
@@ -104,43 +124,13 @@
                 <td> <button @click="removeName(mensaje['.key'])">
           Remove</button></td>
             </tr>
-    </table>  
-
-    <h1> TABLA NAMES </h1>   
-<table class="table1">
-        <thead>
-            <th>FECHA</th>
-            <th>ID</th>
-            <th>Aprendizaje</th>
-            <th>Descripcion</th>
-            <th>Accion</th>
-            <th>Tipo APT</th>
-            <th>Categoría</th>
-            <th>Foto</th>
-            <th>Causa</th>
-        </thead >
-            <tr v-for="mensaje of names"
-                v-bind:key="mensaje['.key']" >
-                <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.id }} </td>
-                <td> {{ mensaje.descripcion }} </td>
-                <td> {{ mensaje.accion }} </td>
-                <td> {{ mensaje.typeAPT }} </td>
-                <td> {{ mensaje.category }} </td>
-                <td> {{ mensaje.photo }} </td>
-                <td> {{ mensaje.aprendizaje }} </td>
-                <td> {{ mensaje.causes }} </td>
-                <td> <button @click="removeName(mensaje['.key'])">
-          Remove</button></td>
-            </tr>
-    </table>  
-
+    </table>   
 <!--
     <h1> LISTAR APT </h1>
     
     <div>
       <ul>
-        <li v-for="personName of names"
+        <li v-for="personName of apt"
         v-bind:key="personName['.key']">        
           <p>
           <button @click="removeName(personName['.key'])">
@@ -162,7 +152,7 @@
   </div>
 </template>
 <script>
-import { namesRef } from "./firebase";
+import { aptRef } from "./firebase";
 
 export default {
   data() {
@@ -180,13 +170,32 @@ export default {
     };
   },
 
-  firebase: {
-    names: namesRef
+    firebase: {
+      apt: aptRef
+              },
+
+  filters: {
+    upper (value) {
+
+      return value.toUpperCase()
+    },
+    number (value){
+      return value = "1 hola que tal";
+    },
+
+    risa (value) {
+     var d = new Date ();
+     var hora = d.getHours;
+    return value = hora;
+    document.getElementById("hora").innerHTML= hora;
+
+    }
   },
 
   methods: {
+
     submitName() {
-      namesRef.push({
+      aptRef.push({
         id: this.id,
         supervisor: this.supervisor,
         fecha: this.fecha,
@@ -201,17 +210,39 @@ export default {
       this.name = "";
     },
     removeName(key) {
-      namesRef.child(key).remove();
+      aptRef.child(key).remove();
     },
     setEditName(key) {
-      namesRef.child(key).update({ edit: true });
+      aptRef.child(key).update({ edit: true });
     },
     cancelEdit(key) {
-      namesRef.child(key).update({ edit: false });
+      aptRef.child(key).update({ edit: false });
     },
+
+    orderByAptdate(key) {
+      aptRef.child(key).update({ edit: false });
+      
+    },
+/* Test with date*/
+     darHora(key) { 
+
+    var d = new Date ();
+     var hora = d.getHours;
+    document.getElementById("hora").innerHTML= d.getMilliseconds();
+    document.getElementById("dia").innerHTML= d.toDateString();
+    document.getElementById("minutos").innerHTML= d.getMinutes();
+    document.getElementById("año").innerHTML= d.getFullYear();
+     },
+
+     ordenar() { 
+       apt.sort();
+       document.getElementById("calculo").innerHTML = apt.fecha;
+
+     },
+
     saveEditName(name) {
       const key = name[".key"];
-      namesRef.child(key).set({
+      aptRef.child(key).set({
         name: person.name,
         edit: false
       });
@@ -223,8 +254,16 @@ export default {
 table {
   border: 1px solid black;
   height: 1%;
-  text-align: center;
+  text-align: left;
   overflow-x: auto;
+}
+
+table.table3 {
+  border: 10px solid rgba(16, 222, 226, 0.809);
+  height: 1%;
+  text-align: left;
+  overflow-x: auto;
+  
 }
 th,
 td {
