@@ -2,10 +2,37 @@
    <div id="app">
     <div>
       <form>            
-    <h5> Formulario </h5>          
+    <h5> Formulario </h5>
+
+        <div class="field">
+          <label class="label">ID</label>
+          <div class="control">
+            <input v-model="id" class="input" type="text" placeholder="e.g Alex Smith">
+          </div>
+        </div> 
+
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="e.g Alex Smith">
+          </div>
+        </div> 
+
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="e.g Alex Smith">
+          </div>
+        </div> 
+
+
+
+
+
+
                 <div class="form_group">
                     <label for="id">ID</label>
-                    <input v-model="id" type="text" class="form-control" required autofocus="autofocus"/>
+                    <input v-model="id" type="text" class="input is-medium" placeholder="Loading input" required autofocus="autofocus"/>
                 </div>
                 <div class="form_group">
                     <label for="idsupervisor">SUPERVISOR</label>
@@ -145,5 +172,7 @@ export default {
   }
 };
 </script>
-<style >
+<style lang="css">
+    @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
+    @import '/node_modules/bulma/css/bulma.min.css';
 </style>

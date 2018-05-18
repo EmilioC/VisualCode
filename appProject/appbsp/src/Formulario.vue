@@ -10,11 +10,11 @@
       <button @click="submitName()" v-on:keyup.enter="submitName()" >Add</button> </h1>               
                 <div class="form_group">
                     <label for="id">ID</label>
-                    <input v-model="id" type="text" class="form-control"/>
+                    <input v-model="id" type="text" class="input is-focused"/>
                 </div>
                 <div class="form_group">
                     <label for="idsupervisor">SUPERVISOR</label>
-                    <input type="text" class="form-control" v-model="supervisor" />
+                    <input type="text" class="input is-success" placeholder="Small input" v-model="supervisor" />
                 </div>        
                 <div class="form_group">
                     <label for="fecha">FECHA</label>
