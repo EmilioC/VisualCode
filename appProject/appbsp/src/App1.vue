@@ -2,7 +2,28 @@
   <div id="app">
     <meta name="viewport" content="width=device-width, initial-scale=1">      
     <section>
-
+<div class="tabs is-toggle ">
+  <ul class="is-expanded">
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i  aria-hidden="true"></i></span>
+        <span><router-link to="/formularioapt">Formulario </router-link></span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i aria-hidden="true"></i></span>
+        <span><router-link to="/listarzona">Consulta</router-link></span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i  aria-hidden="true"></i></span>
+        <span><router-link to="/timeline">Timeline</router-link></span>
+      </a>
+    </li>
+    </ul>
+</div>
 
    <!--   
      <img src="./assets/logo.png"> 
@@ -40,29 +61,6 @@
         <router-link to="/formulario">Formulario NAME</router-link>  -->     
         <router-view></router-view> 
     </section>
-
-    <div class="tabs is-boxed is-small is-fixed">
-  <ul >
-    <li class="is-active">
-      <a>
-        <span class="icon is-small"><i  aria-hidden="true"></i></span>
-        <span><router-link to="/formularioapt">Formulario </router-link></span>
-      </a>
-    </li>
-    <li>
-      <a>
-        <span class="icon is-small"><i aria-hidden="true"></i></span>
-        <span><router-link to="/listarzona">Consulta</router-link></span>
-      </a>
-    </li>
-    <li>
-      <a>
-        <span class="icon is-small"><i  aria-hidden="true"></i></span>
-        <span><router-link to="/timeline">Timeline</router-link></span>
-      </a>
-    </li>
-    </ul>
-</div>
     <ul>
       <li><a href="https://www.danielprimo.io/podcast" target="_blank">WR</a></li>
        <li><a href="https://github.com/EmilioC/VisualCode/tree/master/appProject/appbsp" target="_blank">Git</a></li>

@@ -1,5 +1,5 @@
 <template>
-   <div id="app">   
+   <div id="app">    
        <div><table class="table1">
        <td v-for="mensaje of apt"
         v-bind:key="mensaje['.key']" >  

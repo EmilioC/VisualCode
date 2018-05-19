@@ -1,34 +1,9 @@
 <template>
 
    <div id="app">
-
-<nav class="navbar" role="navigation" aria-label="dropdown navigation">
-  <div class="navbar-item has-dropdown is-hoverable">
-    <a class="navbar-link">
-      Docs
-    </a>
-    <div class="navbar-dropdown">
-      <a class="navbar-item">
-        1 Overview
-      </a>
-      <a class="navbar-item">
-        2 Overview
-      </a>
-      <a class="navbar-item">
-        3 Overview
-      </a>
-      <hr class="navbar-divider">
-      <div class="navbar-item">
-        4 Overview
-      </div>
-    </div>
-  </div>
-</nav>
-
-
    <div>        
       <form>            
-    <h5> Formulario </h5>
+    <h1 class="title is-1">Formulario</h1>
 
         <div class="field">
           <label class="label">ID</label>
@@ -41,8 +16,7 @@
           <div class="control">
             <input v-model="supervisor" class="input" type="text" placeholder="e.g Alex Smith">
           </div>
-        </div>
-        
+        </div>        
         <div class="field">
           <label class="label">FECHA</label>
           <div class="control">
@@ -110,7 +84,6 @@
                     </div>
                 </div>
                 </div>
-
                  <div class="field">
         <label class="label">TIPO</label>
         <div class="control">
@@ -168,6 +141,7 @@
 </template>
 <script>
 import { aptRef } from "./firebase";
+
 
 export default {
   data() {
