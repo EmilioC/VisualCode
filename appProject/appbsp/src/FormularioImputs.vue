@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     </div>
-
+                    <!-- More components if it are necesary
                     <div class="field">
                     <label class="label">Observaciones</label>
                     <div class="control">
@@ -124,7 +124,7 @@
                         No
                         </label>
                     </div>
-                    </div>
+                    </div>  -->
 
                     <div class="field is-grouped">
                     <div class="control">
