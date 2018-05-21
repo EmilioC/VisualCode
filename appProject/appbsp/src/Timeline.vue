@@ -2,15 +2,8 @@
    <div id="app">    
        <div><table class="table1">
        <td v-for="mensaje of apt"
-        v-bind:key="mensaje['.key']" >  
-        
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="e.g Alex Smith">
-          </div>
-        </div>  
-        <hr>             
+        v-bind:key="mensaje['.key']" >   
+        <hr>            
                <div class="timeline is-rtl">
               <header class="timeline-header">
                 <span class="tag is-medium is-primary">
@@ -39,15 +32,13 @@
                 <div class="timeline-marker is-primary"></div>
                 <div class="timeline-content">
                   <p class="heading">{{ mensaje.accion }}</p>
-                </div>
-                
-              </div>
-             
+                </div>                
+              </div>             
               <header class="timeline-header">
                 <span class="tag is-medium is-primary">End</span>
               </header>
-            </div>
-        </td>                 
+            </div>            
+        </td>                
       </table> </div>    
     </div>   
 </template>

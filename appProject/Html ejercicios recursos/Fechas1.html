@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    
+    <title>Document</title>
+</head>
+<body>
+
+        <p id="fecha" @click="removeName()"</p>
+    <script>
+      var now = new Date();  
+        var todayAtMidn = new Date(now.getFullYear(), now.getMonth(), now.getDate());  
+
+        // Set start/end dates to a specified date (ISO format).  
+        var startDate = new Date("2018-01-01T00:00:01Z");  
+        var endDate = new Date("2018-06-01T00:00:01Z");  
+
+        var fecha = document.getElementById("fecha");
+
+        // Compare the two dates by comparing the millisecond  
+        // representations.  
+        if (todayAtMidn.getTime() > startDate.getTime() &&   
+            todayAtMidn.getTime() < endDate.getTime()) {  
+            document.write("Specified date is within this range."); 
+            document.getElementById("fecha").innerHTML= "Dentro fecha";  
+        }  
+        else {  
+            document.write("Specified date is not in this range.");
+            document.getElementById("fecha").innerHTML= "fuera fecha";  
+}
+    </script>
+        <a href="#" onclick="javascript:
+        pruebaEvento(); " >Ver información</a>
+        
+</body>
+</html>

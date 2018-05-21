@@ -2,7 +2,7 @@
    <div id="app">
     <div>
       <form>            
-    <h5> Formulario </h5>
+    <h5> Formulario1 </h5>
 
         <div class="field">
           <label class="label">ID</label>
@@ -11,26 +11,7 @@
           </div>
         </div> 
 
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="e.g Alex Smith">
-          </div>
-        </div> 
-
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="e.g Alex Smith">
-          </div>
-        </div> 
-
-
-
-
-
-
-                <div class="form_group">
+        <div class="form_group">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="input is-medium" placeholder="Loading input" required autofocus="autofocus"/>
                 </div>
@@ -105,7 +86,7 @@
                 <button @click="submitName()">Add</button>   
                 </form>
                 <hr>
-            </div>   
+            </div>               
           </div>
 </template>
 <script>
@@ -168,7 +149,7 @@ export default {
         name: person.name,
         edit: false
       });
-    }
+    },
   }
 };
 </script>

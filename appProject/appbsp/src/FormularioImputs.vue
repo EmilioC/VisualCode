@@ -3,7 +3,7 @@
    <div id="app">
    <div>        
       <form>            
-    <h1 class="title is-1">Formulario</h1>
+    <h1 class="formulario">Formulario</h1>
 
         <div class="field">
           <label class="label">ID</label>
@@ -35,7 +35,7 @@
             <input v-model="accion" class="input" type="text" placeholder="e.g Alex Smith">
           </div>
         </div>
-        <div class="field">
+        <div class="field ">
           <label class="label">TIPO APT</label>
           <div class="typeAPT">
             <input v-model="accion" class="input" type="text" placeholder="e.g Alex Smith">
@@ -207,4 +207,7 @@ export default {
 <style lang="css">
     @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
     @import '/node_modules/bulma/css/bulma.min.css';
+ .formulario{
+   text-align: center;
+ }
 </style>

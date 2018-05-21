@@ -1,63 +1,10 @@
 <template>
   <div id="app">
     <meta name="viewport" content="width=device-width, initial-scale=1">      
-    <section>
-    <div class="tabs is-boxed is-small is-centered">
-      <ul >
-        <li class="is-active">
-          <a>
-            <span class="icon is-small"><i  aria-hidden="true"></i></span>
-            <span><router-link to="/formularioapt">Formulario </router-link></span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="icon is-small"><i aria-hidden="true"></i></span>
-            <span><router-link to="/listarzona">Consulta</router-link></span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <span class="icon is-small"><i  aria-hidden="true"></i></span>
-            <span><router-link to="/timeline">Timeline</router-link></span>
-          </a>
-        </li>
-         <li>
-          <a>
-            <span class="icon is-small"><i  aria-hidden="true"></i></span>
-            <span><router-link to="/timeline">Timeline</router-link></span>
-          </a>
-        </li>
-        </ul>
-    </div>
-
-   <!--   
-     <img src="./assets/logo.png"> 
-     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">   Opciones       
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">            
-           <router-link to="/timeline">Timeline</router-link>
-          </a>
-          <a class="navbar-item">
-            <router-link to="/formularioapt">Formulario APT</router-link>
-          </a>
-          <a class="navbar-item">
-            <router-link to="/listarzona">- Consulta</router-link>
-          </a>
-          <hr class="navbar-divider">
-          <div class="navbar-item">
-            Version 0.7.1
-          </div>
-        </div>
-        </div>
-      </nav> 
-     
+    <section >      
         <router-link to="/formularioapt">Formulario </router-link>
-        <router-link to="/listarzona">- Consulta</router-link>
-        <router-link to="/timeline">- Timeline</router-link>--> 
+        <router-link to="/listarzona">Consulta</router-link>
+        <router-link to="/timeline">Timeline</router-link> 
        <!--   <router-link to="/formularioapt">Formulario APT</router-link>
         <router-link to="/resumen1">Resumen 1</router-link>
         <router-link to="/boton1"> Boton 1</router-link>         
@@ -84,11 +31,9 @@ export default {
     @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
     @import '/node_modules/bulma/css/bulma.min.css';
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 1%;
+  background-color: rgb(253, 253, 253);
 }
+
 </style>

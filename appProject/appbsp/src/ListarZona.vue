@@ -1,111 +1,50 @@
 <template>
    <div id="app">
-  <!-- <div>
-      <form>            
-   <h1> DATOS: basedatos-ccc9b/apt</h1>               
-                <div class="form_group">
-                    <label for="id">ID</label>
-                    <input v-model="id" type="text" class="form-control"/>
-                </div>
-                <div class="form_group">
-                    <label for="idsupervisor">SUPERVISOR</label>
-                    <input type="text" class="form-control" v-model="supervisor" />
-                </div>        
-                <div class="form_group">
-                    <label for="fecha">FECHA</label>
-                    <input type="text" class="form-control" v-model="fecha" />
-                </div>
-                <div class="form_group">
-                    <label for="descriptionAPT">DESCRIPCIÓN</label>
-                    <input type="text" class="form-control" v-model="descripcion" />
-                </div>
-                <div class="form_group">
-                    <label for="actionAPT">ACCIÓN TOMADA</label>
-                    <input type="text" class="form-control" v-model="accion" />
-                </div>
-                <div class="form_group">
-                    <label for="typeAPT">TIPO APT</label>
-                    <input type="text" class="form-control" v-model="typeAPT" />
-                </div>
-                <div class="form_group">
-                    <label for="category">CATEGORÍA APT</label>
-                    <input type="text" class="form-control" v-model="category" />
-                </div>
-                <div class="form_group">
-                    <label for="photoAPT">FOTO</label>
-                    <input type="text" class="form-control" v-model="photo" />
-                </div>
-                <div class="form_group">
-                    <label for="learningAPT">APRENDIZAJE</label>
-                    <input type="text" class="form-control" v-model="aprendizaje" />
-                </div>
-                <div class="form_group">
-                    <label for="causes">EFECTO EN LA INSTALACIÓN</label>
-                    <input type="text" class="form-control" v-model="causes" />
-                </div>
-      <button @click="submitName()">Add</button>
-                </form>
-                <hr>
-    </div> -->
+     <!--
+     <p id="fecha" v-for="mensaje of apt"
+        v-bind:key="mensaje['.key']">hola
+       <button @click="infoFecha(mensaje['.key'])">
+          Remove</button>
+          {{ mensaje.fecha }}
+     </p> -->
+<nav class="level is-mobile">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Pendientes</p>
+      <p class="title">3,456</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Realizados</p>
+      <p class="title">123</p>
+    </div>
+  </div>
+  <div class="level-item is-selected">
+    <div>
+      <p class="heading">Resto</p>
+      <p class="title">456K</p>
+    </div>
+  </div>
+</nav>
 
-<h1>TABLA APT - En Firebase /apt </h1>
-   <!-- Ojo¡¡ the instance of the firebase in this case is "apt"
-   You can find the how create the new object in:
-    firebase: {
-    apt: aptRef
-  },
-  -->           
-<table class="table1">
-        <thead>
-            <th>FECHA</th>
-            <th>ID</th>
-            <th>Aprendizaje</th>
-            <th>Descripcion</th>
-            <th>Accion</th>
-            <th>Tipo APT</th>
-            <th>Categoría</th>
-            <th>Foto</th>
-            <th>Causa</th>
+
+  <div class="columns is-mobile">
+    <div class="column">
+      <table class="table1 is-one-fifth">
+        <thead>           
+            <th>Fecha</th>
+            <th>Categoría</th>           
         </thead >
              <tr v-for="mensaje of apt"
-        v-bind:key="mensaje['.key']" >
+             v-bind:key="mensaje['.key']" >                
                 <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.id }} </td>
-                <td> {{ mensaje.descripcion }} </td>
-                <td> {{ mensaje.accion }} </td>
-                <td> {{ mensaje.typeAPT }} </td>
-                <td> {{ mensaje.category }} </td>
-                <td> {{ mensaje.photo }} </td>
-                <td> {{ mensaje.aprendizaje }} </td>
-                <td> {{ mensaje.causes }} </td>
-                <td> <button @click="removeName(mensaje['.key'])">
-          Remove</button></td>
+                <td> {{ mensaje.category }} </td>           
             </tr>
-    </table>   
-<!--
-    <h1> LISTAR APT </h1>
-    
-    <div>
-      <ul>
-        <li v-for="personName of apt"
-        v-bind:key="personName['.key']">        
-          <p>
-          <button @click="removeName(personName['.key'])">
-          Remove</button>
-          {{personName.id}}
-          {{personName.supervisor}}
-          {{personName.fecha}}
-          {{personName.descripcion}}
-          {{personName.accion}}
-          {{personName.typeAPT}}
-          {{personName.category}}
-          {{personName.photo}}
-          {{personName.aprendizaje}}
-          {{personName.causes}}
-           </p>                 
-        </li>
-      </ul>
-    </div> -->  
+      </table>   
+    </div>
+</div>
+      
   </div>
 </template>
 <script>
@@ -162,27 +101,52 @@ export default {
         name: person.name,
         edit: false
       });
-    }
+    },
+    infoFecha (key){
+      var fecha = new Date(aptRef.child(key).fecha().getFullYear(), 
+      aptRef.child(key).fecha().getMonth(), 
+      aptRef.child(key).fecha().getDate()); 
+      document.getElementById("fecha").innerHTML= fecha;
+      
+      const now = new Date();  
+         //var todayAtMidn= aptRef.child(key).fecha();
+        var todayAtMidn = new Date(now.getFullYear(), now.getMonth(), now.getDate());  
+
+        // Set start/end dates to a specified date (ISO format).  
+        var startDate = new Date("2018-01-01T00:00:01Z");  
+        var endDate = new Date("2018-06-01T00:00:01Z");  
+
+        // Compare the two dates by comparing the millisecond  
+        // representations.  
+        if (todayAtMidn.getTime() > startDate.getTime() &&   
+            todayAtMidn.getTime() < endDate.getTime()) {  
+            document.write("Specified date is within this range."); 
+            document.getElementById("fecha").innerHTML= "Dentro fecha";  
+        }  
+        else {  
+            document.write("Specified date is not in this range.");
+            document.getElementById("fecha").innerHTML= "fuera fecha";  
+            }
+      }
+    
   }
 };
 </script>
-<style>
+
+<style lang="css">
+    @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
+    @import '/node_modules/bulma/css/bulma.min.css';
+
+th, td {
+    padding: 3%;
+    border-bottom: 1px solid #ddd;  
+    text-align: center;  
+}
 table {
-  border: 1px solid black;
-  height: 1%;
-  text-align: left;
-  overflow-x: auto;
+    text-align: center;
+    width: "100%";
+    margin: 3%;
 }
-th,
-td {
-  padding: 2%px;
-  text-align: left;
-  border-bottom: 1px solid rgb(0, 5, 4);
-}
-tr:nth-child(even) {
-  background-color: #dbeaeb;
-}
-div {
-  overflow-x: auto;
-}
+
+
 </style>
