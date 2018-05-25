@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import {routes} from './routes';
-import App from './App.vue';
+import App from './App2.vue';
 import VueFire from 'vuefire';
 import './firebase';
 
