@@ -2,7 +2,7 @@
    <div id="app">
     <div>
       <form>            
-    <h5> Formulario1 </h5>
+    <h5> Formulario </h5>
 
         <div class="field">
           <label class="label">ID</label>

@@ -1,46 +1,48 @@
 <template>
 
-   <div id="app">
+   <div id="app  is-right">
    <div>        
-      <form>            
-    <h1 class="formulario">Formulario</h1>
-
+      <form class="">
         <div class="field">
           <label class="label">ID</label>
           <div class="control">
-            <input v-model="id" class="input" type="text" placeholder="e.g Alex Smith">
+            <input v-model="id" class="input" type="text" placeholder="ID">
           </div>
         </div> 
         <div class="field">
           <label class="label">SUPERVISOR</label>
           <div class="control">
-            <input v-model="supervisor" class="input" type="text" placeholder="e.g Alex Smith">
+            <input v-model="supervisor" class="input" type="text" placeholder="supervisor">
           </div>
         </div>        
         <div class="field">
           <label class="label">FECHA</label>
           <div class="control">
-            <input v-model="fecha" class="date" type="date" placeholder="e.g Alex Smith">
+            <input v-model="fecha" class="date" type="date" placeholder="fecha">
           </div>
         </div>
         <div class="field">
           <label class="label">DESCRIPCIÓN</label>
           <div class="control">
-            <input v-model="descripcion" class="input" type="text" placeholder="e.g Alex Smith">
+            <input v-model="descripcion" class="input" type="text" placeholder="descripcion">
           </div>
         </div>
         <div class="field">
           <label class="label">ACCIÓN TOMADA</label>
           <div class="control">
-            <input v-model="accion" class="input" type="text" placeholder="e.g Alex Smith">
+            <input v-model="accion" class="input" type="text" placeholder="acción">
           </div>
         </div>
-        <div class="field ">
-          <label class="label">TIPO APT</label>
-          <div class="typeAPT">
-            <input v-model="accion" class="input" type="text" placeholder="e.g Alex Smith">
-          </div>
-        </div>
+        <div class="control">
+          <label class="label">TIPO</label>
+            <div class="select">
+                    <select v-model="typeAPT">
+                        <option selected value="Comportamiento"> COMPORTAMIENTO</option>
+                        <option value="Condicion">CONDICIÓN</option>
+                        <option value="Refuerzo">REFUERZO</option>
+                    </select>                    
+                        </div>
+                    </div>
         <div class="field">
         <label class="label">CATEGORÍA</label>
         <div class="control">
@@ -86,15 +88,7 @@
                 </div>
                  <div class="field">
         <label class="label">TIPO</label>
-        <div class="control">
-            <div class="select">
-                    <select v-model="typeAPT">
-                        <option selected value="Comportamiento"> COMPORTAMIENTO</option>
-                        <option value="Condicion">CONDICIÓN</option>
-                        <option value="Refuerzo">REFUERZO</option>
-                    </select>                    
-                        </div>
-                    </div>
+        
                     </div>
                     <!-- More components if it are necesary
                     <div class="field">
@@ -130,9 +124,6 @@
                     <div class="control">
                         <button @click="submitName()" class="button is-link">Add</button>  
                     </div>
-                    <div class="control">
-                        <button class="button is-text">Cancel</button>
-                    </div>
                     </div> 
                 </form>
                 <hr>
@@ -146,14 +137,14 @@ import { aptRef } from "./firebase";
 export default {
   data() {
     return {
-      id: "Muy ",
-      supervisor: "Antonio",
+      id: null,
+      supervisor: null,
       fecha: null,
-      descripcion: "descrito",
-      accion: "acción tomada",
+      descripcion: null,
+      accion: null,
       typeAPT: null,
       category: null,
-      photo: "Si",
+      photo: null,
 
      /* id: null,
       supervisor: null,

@@ -1,22 +1,27 @@
 <template>
   <div id="app">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <section class="is-fullwidth columns is-gapless" > 
-        <div class="columns is-mobile">
-        <div class="column">      
-            <button class="button is-link is-outlined is-half"><router-link to="/listarzona">Consulta</router-link></button> 
+    <section > 
+        <nav class="level">
+        <div class="columns is-flex-mobile has-text-centered">
+        <div class="column ">      
+            <button class="button is-link is-outlined is-large  "><router-link to="/listarzona">Consulta</router-link></button> 
         </div>
         <div class="column">      
-            <button class="button is-link is-outlined "><router-link to="/formularioapt">Formulario </router-link></button>
-        </div>
-        <div class="column">           
-            <button class="button is-link is-outlined "> <router-link to="/timeline">Timeline</router-link> </button>
+            <button class="button is-link is-outlined is-large"><router-link to="/formularioapt">Formulario </router-link></button>
         </div>  
         </div> 
+        <!--
+        <router-link to="/resumen1">Resumen 1</router-link>
+        <router-link to="/boton1"> Boton 1</router-link>         
+        <router-link to="/boton2"> Boton 2</router-link>
+        <router-link to="/codeveloper"> codeveloper</router-link>                     
+        <router-link to="/listafuera">Lista tabla NAME</router-link>
+        <router-link to="/formulario">Formulario NAME</router-link> -->
         <router-view></router-view>
+        </nav>
     </section>
- </div>  
-  
+ </div>    
 </template>
 
 <script>
@@ -28,10 +33,7 @@ export default {
     @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
     @import '/node_modules/bulma/css/bulma.min.css';
 #app {
-  color: #2c3e50;
-  margin-top: 1%;
-  background-color: rgb(255, 255, 255);
-  position: center;
+  margin-top: 2%;
 }
 
 </style>
