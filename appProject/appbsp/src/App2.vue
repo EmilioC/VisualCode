@@ -1,25 +1,22 @@
 <template>
   <div id="app">
-    <meta name="viewport" content="width=device-width, initial-scale=1">      
-    <section >      
-        <router-link to="/formularioapt">Formulario </router-link>
-        <router-link to="/listarzona">Consulta</router-link>
-        <router-link to="/timeline">Timeline</router-link> 
-       <!--   <router-link to="/formularioapt">Formulario APT</router-link>
-        <router-link to="/resumen1">Resumen 1</router-link>
-        <router-link to="/boton1"> Boton 1</router-link>         
-        <router-link to="/boton2"> Boton 2</router-link>
-        <router-link to="/codeveloper"> codeveloper</router-link>                     
-        <router-link to="/listafuera">Lista tabla NAME</router-link>
-        <router-link to="/formulario">Formulario NAME</router-link>  -->     
-        <router-view></router-view> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <section class="is-fullwidth columns is-gapless" > 
+        <div class="columns is-mobile">
+        <div class="column">      
+            <button class="button is-link is-outlined is-half"><router-link to="/listarzona">Consulta</router-link></button> 
+        </div>
+        <div class="column">      
+            <button class="button is-link is-outlined "><router-link to="/formularioapt">Formulario </router-link></button>
+        </div>
+        <div class="column">           
+            <button class="button is-link is-outlined "> <router-link to="/timeline">Timeline</router-link> </button>
+        </div>  
+        </div> 
+        <router-view></router-view>
     </section>
-    <ul>
-      <li><a href="https://www.danielprimo.io/podcast" target="_blank">WR</a></li>
-       <li><a href="https://github.com/EmilioC/VisualCode/tree/master/appProject/appbsp" target="_blank">Git</a></li>
-    </ul>   
-    
-  </div>
+ </div>  
+  
 </template>
 
 <script>
@@ -33,7 +30,8 @@ export default {
 #app {
   color: #2c3e50;
   margin-top: 1%;
-  background-color: rgb(253, 253, 253);
+  background-color: rgb(255, 255, 255);
+  position: center;
 }
 
 </style>
