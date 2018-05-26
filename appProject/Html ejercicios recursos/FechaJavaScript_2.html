@@ -17,6 +17,10 @@
 <input id="fecha1" class="date" type="date" placeholder="fecha1">
 <input id="input1" class="date" type="text" placeholder="fecha">
 <button onclick="mostrarFechas()">calculo</button><br>
+
+<label>RESULTADO</label>
+<label id="resultado" ></label>
+
 <label>dia</label>
 <label id="dia" ></label>
 <label>mes</label>
@@ -68,6 +72,13 @@
       function checkTime(i) {
           if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
           return i;
+      }
+
+      function restarFecha(){
+        var fechaActual = "";
+        document.getElementById("fecha").getUTCDate()= fechaActual;
+        
+
       }
     
          
