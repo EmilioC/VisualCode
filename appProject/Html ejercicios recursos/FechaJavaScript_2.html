@@ -13,13 +13,30 @@
 
     <label id="demo" ></label>
     <br>
-<input id="fecha" class="date" type="date" placeholder="fecha">
-<input id="fecha1" class="date" type="date" placeholder="fecha1">
+<input id="fecha" type="date" value="2018-05-01">
+<input id="fecha1" type="date" value="2018-05-27">
 <input id="input1" class="date" type="text" placeholder="fecha">
-<button onclick="mostrarFechas()">calculo</button><br>
+<button onclick="mostrarFechas()">calculo</button>
+<button onclick="restarFecha()">resta</button><br>
 
-<label>RESULTADO</label>
+<label>RESULTADO:</label>
 <label id="resultado" ></label>
+<br>
+<label>RESULTADO 1:</label>
+<label id="resultado1" ></label>
+<br>
+<label>RESULTADO 2:</label>
+<label id="resultado2" ></label>
+<br>
+<label>RESULTADO 3:</label>
+<label id="resultado3" ></label>
+<br>
+<label>RESULTADO 4:</label>
+<label id="resultado4" ></label>
+<br>
+<label>RESULTADO 5:</label>
+<label id="resultado5" ></label>
+<br>
 
 <label>dia</label>
 <label id="dia" ></label>
@@ -73,12 +90,21 @@
           if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
           return i;
       }
-
-      function restarFecha(){
-        var fechaActual = "";
-        document.getElementById("fecha").getUTCDate()= fechaActual;
+      function restarFecha(){        
         
+        var fechaActual = document.getElementById ("fecha").value;
+        var fechaActual1 = document.getElementById ('fecha1').value;
+        document.getElementById ('resultado').innerHTML= fechaActual;
+        document.getElementById ('resultado1').innerHTML= fechaActual1;
+        
+        var today1 = new Date(fechaActual);
+        var today = new Date();
+        
+        document.getElementById ('resultado2').innerHTML= today.toUTCString();
+        document.getElementById ('resultado3').innerHTML= today.getMonth();
+        document.getElementById ('resultado4').innerHTML= today.getMilliseconds();
 
+        
       }
     
          
