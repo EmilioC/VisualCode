@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <label id="demo" ></label><br>
+<input id="fecha" class="date" type="date" placeholder="fecha">
+<input id="input1" class="date" type="text" placeholder="fecha">
+<button onclick="sumarFechas()">calculo</button>
+<br>
+<label>nueva fecha</label>
+<label id="nuevafecha" ></label><br><br>
+
+<label>Fecha actual</label>
+<label id="fechaactual" ></label><br><br>
+
+<label>dia</label>
+<label id="dia" ></label>
+<label>mes</label>
+<label id="mes" ></label>
+<label>año</label>
+<label id="ano" ></label>
+<label>ano</label>
+<br>
+<label id="hora" ></label>
+<label>minuto</label>
+<label id="minuto" ></label>
+<label>segundo</label>
+<label id="segundo" ></label>
+
+<div class='parent'>
+        <div class='box' id='one'></div>
+        <div class='box' id='two'>Two</div>
+        <div class='box' id='three'>Three</div>
+        <div class='box' id='four'>Four</div>
+       </div>
+       <div class='parent1'>
+            <div class='box1' id='one1'>One</div>
+            <div class='box1' id='two1'>Two</div>
+            <div class='box1' id='three1'>Three</div>
+            <div class='box1' id='four1'>Four</div>
+           </div>  
+</body>
+<script>
+  /*
+var cars = ["Saab","Volvo","BMW"];
+  document.getElementById("demo1").innerHTML = cars[2];
+  for ( i=0; i<cars.lenght; i++){   
+    document.getElementById("demo1").innerHTML = cars[i];
+    console.log ("cars[i]")
+  };*/
+
+  var d = new Date();
+  var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];  
+  var d = new Date();
+  d.setFullYear(2020);
+  document.getElementById("demo").innerHTML = d;
+
+  function sumarFechas(){
+      var year = "1022";
+      var month ="1";
+      var day= "28";
+      var seconds ="1";
+      var date = new Date(year, month, day);
+      document.getElementById("dia").innerHTML = d.day() + 15;
+      document.getElementById("mes").innerHTML = date.getMonth();
+      document.getElementById("ano").innerHTML = date.getFullYear();
+      document.getElementById("hora").innerHTML = date.getHours();
+      document.getElementById("minuto").innerHTML = date.getMinutes();
+      document.getElementById("segundo").innerHTML = date.getSeconds();;
+    };      
+  </script>
+
+<style>  
+  .demo6{
+    background-color: aqua;
+  }
+  .demo7{
+    background-color: rgb(60, 255, 0);
+  }
+parent1 {
+ border: 2px rgb(132, 207, 148) dotted;
+ display: inline-block;
+}
+.box1 {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two1 {
+  top: 30px;
+  left: 20px;
+  background: rgb(137, 185, 137);
+  position: relative;
+}
+.parent {
+ border: 2px black dotted;
+ display: inline-block;
+}
+.box {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two {
+  background: green;
+}
+
+
+</style>
+
+</html>

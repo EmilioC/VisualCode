@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <script>
+   
+    </script>
+</head>
+<!-- onload Event Execute a JavaScript immediately after a page has been loaded-->
+<body onload="startTime()">
+<!-- Show the timing clock actual-->
+  <div id="txt"></div>
+
+    <label id="demo" ></label>
+    <br>
+<input id="fecha" class="date" type="date" placeholder="fecha">
+<input id="fecha1" class="date" type="date" placeholder="fecha1">
+<input id="input1" class="date" type="text" placeholder="fecha">
+<button onclick="mostrarFechas()">calculo</button><br>
+<label>dia</label>
+<label id="dia" ></label>
+<label>mes</label>
+<label id="mes" ></label>
+<label>año</label>
+<label id="ano" ></label>
+<br>
+<label>Fecha completa</label>
+<label id="dateComplete" ></label>
+<hr>
+<label>dia: </label>
+<label id="dia1" ></label>
+<label>mes: </label>
+<label id="mes1" ></label>
+<label>año:</label>
+<label id="ano1" ></label>
+<br>
+<label>Fecha completa: </label>
+<label id="dateComplete1" ></label>
+</body>
+
+<script>
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+    var d1 = new Date(2020, 11, 22, 8, 31, 31);
+    function mostrarFechas(){ 
+      document.getElementById("dia").innerHTML = d.getUTCDate();
+      document.getElementById("mes").innerHTML = d.getMonth();
+      document.getElementById("ano").innerHTML = d.getFullYear();
+      document.getElementById("dateComplete").innerHTML = d.toDateString();
+
+      document.getElementById("dia1").innerHTML = d1.getUTCDate();
+      document.getElementById("mes1").innerHTML = d1.getMonth();
+      document.getElementById("ano1").innerHTML = d1.getFullYear();
+      document.getElementById("dateComplete1").innerHTML = d1.getDay();
+    }
+    /*<!-- Show timing clock-->*/
+ function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+    
+         
+  </script>
+
+<style>  
+  .demo6{
+    background-color: aqua;
+  }
+  .demo7{
+    background-color: rgb(60, 255, 0);
+  }
+parent1 {
+ border: 2px rgb(132, 207, 148) dotted;
+ display: inline-block;
+}
+.box1 {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two1 {
+  top: 30px;
+  left: 20px;
+  background: rgb(137, 185, 137);
+  position: relative;
+}
+.parent {
+ border: 2px black dotted;
+ display: inline-block;
+}
+.box {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two {
+  background: green;
+}
+
+
+</style>
+
+</html>
