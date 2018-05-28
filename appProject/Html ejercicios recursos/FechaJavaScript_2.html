@@ -13,7 +13,7 @@
 
     <label id="demo" ></label>
     <br>
-<input id="fecha" type="date" value="2018-04-01">
+<input id="fecha" type="date" value="2018-05-22">
 <input id="fecha1" type="date" value="2018-02-27">
 <input id="input1" class="date" type="text" placeholder="fecha">
 <br><button onclick="mostrarFechas()">calculo</button>
@@ -39,6 +39,9 @@
 <br>
 <label>RESULTADO 6:</label>
 <label id="resultado6" ></label>
+<br>
+<label>RESULTADO 7:</label>
+<label id="resultado7" ></label>
 <br>
 
 <label>dia</label>
@@ -105,10 +108,10 @@
 
         // Example: https://msdn.microsoft.com/es-es/library/ee532932(v=vs.94).aspx
         var birthday = new Date(fechaActual);
-        var years = today.getMonth() - birthday.getMonth();
-
-        // Reset birthday to the current year.
-        birthday.setFullYear(today.getFullYear());        
+        var fecha_diferencia_milisegundos = today - birthday;
+        var fecha_diferencia_dias =
+         (fecha_diferencia_milisegundos/(1000*60*60*24));
+         var fecha_diferencia_dias_sinDecimal = fecha_diferencia_dias.toFixed(1);        
         
         document.getElementById ('resultado').innerHTML= fechaActual;
         document.getElementById ('resultado1').innerHTML= fechaActual1;
@@ -117,7 +120,14 @@
         document.getElementById ('resultado4').innerHTML= today.getMilliseconds();
         document.getElementById ('resultado5').innerHTML= today.getUTCDate();
         document.getElementById ('resultado6').innerHTML= 
-        "Hace "+ years+" meses que no subes APT";        
+        "Hace "+ fecha_diferencia_dias_sinDecimal+" meses que no subes APT"; 
+        
+        if( fecha_diferencia_dias_sinDecimal>7){
+          document.getElementById ('resultado7').innerHTML= "Es necesario intro"
+          +"ducir un APT";
+        }
+        else {document.getElementById ('resultado7').innerHTML= "Vas bien";
+        }
       }
     
          

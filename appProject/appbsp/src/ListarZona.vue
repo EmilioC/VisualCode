@@ -7,6 +7,7 @@
           Remove</button>
           {{ mensaje.fecha }}
      </p> -->
+     <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
   <div class="level-item has-text-centered">
     <div>
@@ -20,15 +21,13 @@
       <p class="title">123</p>
     </div>
   </div>
-  <div class="level-item is-selected">
+  <div class="level-item is-selected has-text-centered">
     <div>
       <p class="heading">Resto</p>
       <p class="title">456K</p>
     </div>
   </div>
 </nav>
-
-
   <div class="columns is-mobile">
     <div class="column">
       <table class="table1 is-one-fifth">

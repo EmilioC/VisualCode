@@ -86,40 +86,9 @@
                     </div>
                 </div>
                 </div>
-                 <div class="field">
-        <label class="label">TIPO</label>
-        
+                <div class="field">
+                <label class="label">TIPO</label>        
                     </div>
-                    <!-- More components if it are necesary
-                    <div class="field">
-                    <label class="label">Observaciones</label>
-                    <div class="control">
-                        <textarea class="textarea" placeholder="Textarea"></textarea>
-                    </div>
-                    </div>
-
-                    <div class="field">
-                    <div class="control">
-                        <label class="checkbox">
-                        <input type="checkbox">
-                        I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                    </div>
-                    </div>
-
-                    <div class="field">
-                    <div class="control">
-                        <label class="radio">
-                        <input type="radio" name="question">
-                        Yes
-                        </label>
-                        <label class="radio">
-                        <input type="radio" name="question">
-                        No
-                        </label>
-                    </div>
-                    </div>  -->
-
                     <div class="field is-grouped">
                     <div class="control">
                         <button @click="submitName()" class="button is-link">Add</button>  
@@ -133,7 +102,6 @@
 <script>
 import { aptRef } from "./firebase";
 
-
 export default {
   data() {
     return {
@@ -145,19 +113,9 @@ export default {
       typeAPT: null,
       category: null,
       photo: null,
-
-     /* id: null,
-      supervisor: null,
-      fecha: null,
-      descripcion: null,
-      accion: null,
-      typeAPT: null,
-      category: null,
-      photo: null*/
-    };
+      };
     mydate: "2017-07-04";
   },
-
   firebase: {
     apt: aptRef
   },
@@ -198,7 +156,4 @@ export default {
 <style lang="css">
     @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
     @import '/node_modules/bulma/css/bulma.min.css';
- .formulario{
-   text-align: center;
- }
 </style>
