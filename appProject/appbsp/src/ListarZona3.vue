@@ -7,26 +7,35 @@
           Remove</button>
           {{ mensaje.fecha }}
      </p> -->
+    
+    <tr v-for="mensaje of apt"
+             v-bind:key="mensaje['.key']" >                
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.category }} </td>           
+            </tr>
+
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
   <div class="level-item has-text-centered">
     <div>
-      <p class="heading">Pendientes</p>
+      <p class="heading">APT Realizados</p>
       <p class="title">3,456</p>
     </div>
   </div>
   <div class="level-item has-text-centered">
     <div>
-      <p class="heading">Realizados</p>
+      <p class="heading">APT MAYO</p>
       <p class="title">123</p>
     </div>
   </div>
   <div class="level-item is-selected has-text-centered">
     <div>
       <p class="heading">Resto</p>
-      <p class="title">456K</p>
+      <p class="title">{{aptMayo}}</p>
+      <p class="title">{{aptAbril}}</p>
     </div>
   </div>
+  
 </nav>
   <div class="columns is-mobile">
     <div class="column">
@@ -42,7 +51,7 @@
             </tr>
       </table>   
     </div>
-</div>      
+  </div>      
   </div>
 </template>
 <script>
@@ -60,7 +69,13 @@ export default {
       category: "Riesgo tropezar o caer",
       photo: "si",
       aprendizaje: "Responsabilidad equipos en buen estado",
-      causes: "Reducción probabilidad de accidente"
+      causes: "Reducción probabilidad de accidente",
+    /* Test with Computed Properties 
+    https://vuejs.org/v2/guide/computed.html#Computed-Properties*/
+      fechas :"fechas",
+      cP_: "si",
+      cP_a :"3",
+      cP_b :"4", 
     };
   },
 
@@ -81,6 +96,7 @@ export default {
         photo: this.photo,
         aprendizaje: this.aprendizaje,
         causes: this.causes
+        
       });
       this.name = "";
     },
@@ -100,33 +116,25 @@ export default {
         edit: false
       });
     },
-    infoFecha (key){
-      var fecha = new Date(aptRef.child(key).fecha().getFullYear(), 
-      aptRef.child(key).fecha().getMonth(), 
-      aptRef.child(key).fecha().getDate()); 
-      document.getElementById("fecha").innerHTML= fecha;
-      
-      const now = new Date();  
-         //var todayAtMidn= aptRef.child(key).fecha();
-        var todayAtMidn = new Date(now.getFullYear(), now.getMonth(), now.getDate());  
+    infoFecha (){ 
+      fechas: this.fechas;
+      fechas = "vamos";      
+      }
+    },
+    computed: {
+      aptMayo (){ 
 
-        // Set start/end dates to a specified date (ISO format).  
-        var startDate = new Date("2018-01-01T00:00:01Z");  
-        var endDate = new Date("2018-06-01T00:00:01Z");  
-
-        // Compare the two dates by comparing the millisecond  
-        // representations.  
-        if (todayAtMidn.getTime() > startDate.getTime() &&   
-            todayAtMidn.getTime() < endDate.getTime()) {  
-            document.write("Specified date is within this range."); 
-            document.getElementById("fecha").innerHTML= "Dentro fecha";  
-        }  
-        else {  
-            document.write("Specified date is not in this range.");
-            document.getElementById("fecha").innerHTML= "fuera fecha";  
-            }
-      }    
-  }
+        return this.cP_a = "6"
+      },
+      aptAbril (){           
+        return this.cP_b = "6"
+      },
+       aptFecha (){           
+        return this.aptRef.filter(function(aptRef){
+          return tarea.fecha;
+        });
+      }
+    }
 };
 </script>
 
