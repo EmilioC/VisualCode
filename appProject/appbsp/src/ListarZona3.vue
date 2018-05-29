@@ -7,12 +7,6 @@
           Remove</button>
           {{ mensaje.fecha }}
      </p> -->
-    <tr v-for="mensaje of apt"
-        v-bind:key="mensaje['.key']" >                
-          <td> {{ mensaje.fecha }} </td>
-          <td> {{ mensaje.category }} </td> 
-          <td> {{ mensaje.id }} </td>            
-    </tr>   
 
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
@@ -30,9 +24,8 @@
   </div>
   <div class="level-item is-selected has-text-centered">
     <div>
-      <p class="heading">Resto</p>
+      <p class="heading">PENDIENTES</p>
       <p class="title">{{aptMayo}}</p>
-      <p class="title">{{aptAbril}}</p>
     </div>
   </div>
   
@@ -56,7 +49,6 @@
 </template>
 <script>
 import { aptRef } from "./firebase";
-
 
 export default {
 
@@ -83,8 +75,6 @@ export default {
       cP_a :"3",
       cP_b :"4",
       minimo : "3", 
-
-      aptFirebase : aptRef,
     };
   },
 
@@ -124,7 +114,7 @@ export default {
       fechas: this.fechas;
       fechas = "vamos";      
       }
-    },     
+    },       
 
     computed: {
       aptMayo (){ 
@@ -132,11 +122,8 @@ export default {
       },
       aptAbril (){           
         return this.cP_b = "6"
-      },
-       ordenarPorFecha (key){
-        return this.aptFirebase(key).filter((aptFirebase) =>
-        aptFirebase.id >= this.minimo);   
-    },      
+      },           
+       
    }
 };
 </script>
