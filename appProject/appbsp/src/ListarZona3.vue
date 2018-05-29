@@ -7,12 +7,12 @@
           Remove</button>
           {{ mensaje.fecha }}
      </p> -->
-    
     <tr v-for="mensaje of apt"
-             v-bind:key="mensaje['.key']" >                
-                <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.category }} </td>           
-            </tr>
+        v-bind:key="mensaje['.key']" >                
+          <td> {{ mensaje.fecha }} </td>
+          <td> {{ mensaje.category }} </td> 
+          <td> {{ mensaje.id }} </td>            
+    </tr>   
 
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
@@ -57,7 +57,13 @@
 <script>
 import { aptRef } from "./firebase";
 
+
 export default {
+
+  firebase: {
+    apt: aptRef
+  },
+
   data() {
     return {
       id: null,
@@ -75,12 +81,11 @@ export default {
       fechas :"fechas",
       cP_: "si",
       cP_a :"3",
-      cP_b :"4", 
-    };
-  },
+      cP_b :"4",
+      minimo : "3", 
 
-  firebase: {
-    apt: aptRef
+      aptFirebase : aptRef,
+    };
   },
 
   methods: {
@@ -95,8 +100,7 @@ export default {
         category: this.category,
         photo: this.photo,
         aprendizaje: this.aprendizaje,
-        causes: this.causes
-        
+        causes: this.causes        
       });
       this.name = "";
     },
@@ -120,21 +124,20 @@ export default {
       fechas: this.fechas;
       fechas = "vamos";      
       }
-    },
+    },     
+
     computed: {
       aptMayo (){ 
-
         return this.cP_a = "6"
       },
       aptAbril (){           
         return this.cP_b = "6"
       },
-       aptFecha (){           
-        return this.aptRef.filter(function(aptRef){
-          return tarea.fecha;
-        });
-      }
-    }
+       ordenarPorFecha (key){
+        return this.aptFirebase(key).filter((aptFirebase) =>
+        aptFirebase.id >= this.minimo);   
+    },      
+   }
 };
 </script>
 

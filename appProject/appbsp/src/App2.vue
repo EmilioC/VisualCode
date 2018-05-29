@@ -9,8 +9,12 @@
         </div>
         <div class="column">      
             <button class="button is-link is-outlined is-large"><router-link to="/formularioapt">Formulario </router-link></button>
+        </div> 
+        <div class="column">      
+            <button class="button is-link is-outlined is-large"><router-link to="/boton2"> Boton 2</router-link>Formulario </router-link></button>
         </div>  
         </div> 
+        
         <!--
         <router-link to="/resumen1">Resumen 1</router-link>
         <router-link to="/boton1"> Boton 1</router-link>         
