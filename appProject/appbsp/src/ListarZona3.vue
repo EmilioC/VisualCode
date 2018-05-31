@@ -37,7 +37,7 @@
             <th>Fecha</th>
             <th>Categoría</th>           
         </thead >
-             <tr v-for="mensaje of filtroCategoria"
+             <tr v-for="mensaje of filtroId"
              v-bind:key="mensaje['.key']" >                
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td>   
@@ -118,8 +118,7 @@ export default {
       fechas: this.fechas;
       fechas = "vamos";      
       }
-    }, 
-    
+    },     
 
     computed: {
       aptMayo (){ 
@@ -128,9 +127,10 @@ export default {
       aptAbril (){           
         return this.cP_b = "6"
       }, 
-      /*Filter apt with .id and includes*/
+      /*Filter apt with .id and includes. Test only is 
+      the new value that we used for traverse the array */
       filtroId (){
-      return this.apt.filter((juego) => juego.id.includes(""));
+      return this.apt.filter((test) => test.id.includes("3"));
       }, 
       /*Filter apt with letters insite of field category with includes*/
       filtroCategoria (){
