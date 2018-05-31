@@ -86,12 +86,9 @@
                     </div>
                 </div>
                 </div>
-                <div class="field">
-                <label class="label">TIPO</label>        
-                    </div>
                     <div class="field is-grouped">
                     <div class="control">
-                        <button @click="submitName()" class="button is-link">Add</button>  
+                        <button @click="submitName()" class="button is-link">AÑADIR APT</button>  
                     </div>
                     </div> 
                 </form>
