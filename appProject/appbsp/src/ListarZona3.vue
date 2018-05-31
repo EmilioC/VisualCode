@@ -7,7 +7,7 @@
           Remove</button>
           {{ mensaje.fecha }}
      </p> -->
-<button @click="ordenarPorId('id')">Por Color</button>
+
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
   <div class="level-item has-text-centered">
@@ -37,7 +37,7 @@
             <th>Fecha</th>
             <th>Categoría</th>           
         </thead >
-             <tr v-for="mensaje of apt"
+             <tr v-for="mensaje of filtroCategoria"
              v-bind:key="mensaje['.key']" >                
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td>   
@@ -75,7 +75,10 @@ export default {
       cP_: "si",
       cP_a :"3",
       cP_b :"4",
-      minimo : "3", 
+      minimo : "4", 
+      mensaje: null,
+      username: 'juanwmedia',
+      mensajes: [],
     };
   },
 
@@ -116,11 +119,7 @@ export default {
       fechas = "vamos";      
       }
     }, 
-       ordenarPorId(key) {
-              this.aptRef.orderByChild(key).on('child_added', snapshot => {
-                    console.log(snapshot.key, snapshot.val());
-                });
-       },
+    
 
     computed: {
       aptMayo (){ 
@@ -129,8 +128,14 @@ export default {
       aptAbril (){           
         return this.cP_b = "6"
       }, 
-
-       
+      /*Filter apt with .id and includes*/
+      filtroId (){
+      return this.apt.filter((juego) => juego.id.includes(""));
+      }, 
+      /*Filter apt with letters insite of field category with includes*/
+      filtroCategoria (){
+      return this.apt.filter((juego) => juego.category.includes("o y"));
+      },       
    }
 };
 </script>
