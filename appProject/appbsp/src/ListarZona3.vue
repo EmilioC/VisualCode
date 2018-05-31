@@ -7,7 +7,7 @@
           Remove</button>
           {{ mensaje.fecha }}
      </p> -->
-
+<button @click="ordenarPorId('id')">Por Color</button>
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
   <div class="level-item has-text-centered">
@@ -40,7 +40,8 @@
              <tr v-for="mensaje of apt"
              v-bind:key="mensaje['.key']" >                
                 <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.category }} </td>           
+                <td> {{ mensaje.category }} </td>   
+                <td> {{ mensaje.id }} </td>         
             </tr>
       </table>   
     </div>
@@ -114,7 +115,12 @@ export default {
       fechas: this.fechas;
       fechas = "vamos";      
       }
-    },       
+    }, 
+       ordenarPorId(key) {
+              this.aptRef.orderByChild(key).on('child_added', snapshot => {
+                    console.log(snapshot.key, snapshot.val());
+                });
+       },
 
     computed: {
       aptMayo (){ 
@@ -122,7 +128,8 @@ export default {
       },
       aptAbril (){           
         return this.cP_b = "6"
-      },           
+      }, 
+
        
    }
 };
