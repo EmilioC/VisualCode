@@ -8,6 +8,13 @@
           {{ mensaje.fecha }}
      </p> -->
 
+      <tr v-for="mensaje of filtroMay"
+             v-bind:key="mensaje['.key']"  >                
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.category }} </td>   
+                <td> {{ mensaje.id }} </td>         
+            </tr>
+
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
   <div class="level-item has-text-centered">
@@ -37,8 +44,8 @@
             <th>Fecha</th>
             <th>Categoría</th>           
         </thead >
-             <tr v-for="mensaje of filtroId"
-             v-bind:key="mensaje['.key']" >                
+             <tr v-for="mensaje of filtroMay"
+             v-bind:key="mensaje['.key']">                
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td>   
                 <td> {{ mensaje.id }} </td>         
@@ -75,7 +82,8 @@ export default {
       cP_: "si",
       cP_a :"3",
       cP_b :"4",
-      minimo : "4", 
+      minimo : "0",
+      mayo: "31-05-2018", 
       mensaje: null,
       username: 'juanwmedia',
       mensajes: [],
@@ -118,7 +126,18 @@ export default {
       fechas: this.fechas;
       fechas = "vamos";      
       }
-    },     
+    },  
+    ordenarPorKeySecundaria(key) {
+                this.gatos
+                    .orderByChild(key)
+                    //.limitToLast(2)
+                    //.startAt(1)
+                    //.endAt(998)
+                    .equalTo(999)
+                    .on('child_added', snapshot => {
+                        console.log(snapshot.key, snapshot.val());
+                    });
+            },   
 
     computed: {
       aptMayo (){ 
@@ -135,7 +154,11 @@ export default {
       /*Filter apt with letters insite of field category with includes*/
       filtroCategoria (){
       return this.apt.filter((juego) => juego.category.includes("o y"));
-      },       
+      },  
+      filtroMay (){
+        var date;
+      return this.apt.filter((juego) => (date = juego.fecha) = this.mayo);
+      },     
    }
 };
 </script>
