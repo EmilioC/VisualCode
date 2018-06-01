@@ -8,12 +8,8 @@
           {{ mensaje.fecha }}
      </p> -->
 
-      <tr v-for="mensaje of filtroMay"
-             v-bind:key="mensaje['.key']"  >                
-                <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.category }} </td>   
-                <td> {{ mensaje.id }} </td>         
-            </tr>
+     
+     <button @click="aptMayo()" class="button is-link">AÑADIR APT</button>
 
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 <nav class="level is-mobile">
@@ -21,6 +17,7 @@
     <div>
       <p class="heading">APT Realizados</p>
       <p class="title">3,456</p>
+      <p class="heading" id="demo">HOLA </p>
     </div>
   </div>
   <div class="level-item has-text-centered">
@@ -127,16 +124,8 @@ export default {
       fechas = "vamos";      
       }
     },  
-    ordenarPorKeySecundaria(key) {
-                this.gatos
-                    .orderByChild(key)
-                    //.limitToLast(2)
-                    //.startAt(1)
-                    //.endAt(998)
-                    .equalTo(999)
-                    .on('child_added', snapshot => {
-                        console.log(snapshot.key, snapshot.val());
-                    });
+    aptMayo() {     
+         document.getElementById ('demo').innerHTML= "hola";       
             },   
 
     computed: {
