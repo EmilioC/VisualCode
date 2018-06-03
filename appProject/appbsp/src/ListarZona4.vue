@@ -9,8 +9,11 @@
      </p> -->     
      <button @click="aptMayo()" class="button is-link">AÑADIR APT</button>
     <p class="title">{{fechaDiaMesAno}}</p>
+    <input id="fecha" type="date" value="2018-02-27">
     <label class="title" id="aptMes">{{aptMes}}</label>
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
+
+
 <nav class="level is-mobile">
   <div class="level-item has-text-centered">
     <div>
@@ -21,8 +24,7 @@
             <li v-for="fecha in fechita"
             v-bind:key="fecha['.key']">
             </li>
-          </ul>
-          
+          </ul>          
         </p>
     </div>
   </div>
@@ -31,10 +33,10 @@
       <p class="heading">APT MAYO</p>
       <p class="title">123</p>
     </div>
-  </div>
- 
+  </div> 
 </nav>
-  <div class="columns is-desktop " >
+<hr> <!-- Table of May-->
+<div class="columns is-desktop " >
     <div class="">
       <table class="table1 is-one-fifth ">
         <thead>           
@@ -46,8 +48,7 @@
              v-bind:key="mensaje['.key']">                
                 <td> {{ index  }}</td>
                 <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.category }} </td>   
-                        
+                <td> {{ mensaje.category }} </td>                           
             </tr>
       </table>   
     </div>
@@ -174,17 +175,20 @@ export default {
 
     /*Test with create new array type apt but we modify*
     and we use av-for for take new values of array*/
-      return this.apt.filter((juego) => 
-      ( juego.id = m,
-      juego.fecha =a+"-"+m+"-"+d     
-      ));
       
-      var mesActual = "6";
-      if ( "1" == "1") {
-      this.aptMes = "4";
+      /*If it is the current month*/
+      var m = "6";
+      var fechaAPTactual = "5";      
+      if ( m = fechaAPTactual) {
+          return this.apt.filter((juego) => ( 
+          juego.id = m,
+          juego.fecha = m     
+          ));
       }
       else {
-        this.aptMes = "8";
+          return this.apt.filter((juego) => ( 
+          juego.id = m    
+          ));
       }
 
       /*Probando con un if dentro del recorrer juego.id.. ju
@@ -202,6 +206,5 @@ export default {
 <style lang="css">
     @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
     @import '/node_modules/bulma/css/bulma.min.css';
-
 
 </style>

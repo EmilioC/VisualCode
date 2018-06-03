@@ -12,6 +12,7 @@
   <div id="txt"></div>
 
     <label id="demo" ></label>
+    
     <br>
 <input id="fecha" type="date" value="2018-05-22">
 <input id="fecha1" type="date" value="2018-02-27">
@@ -120,9 +121,9 @@
         document.getElementById ('resultado4').innerHTML= today.getMilliseconds();
         document.getElementById ('resultado5').innerHTML= today.getUTCDate();
         document.getElementById ('resultado6').innerHTML= 
-        "Hace "+ fecha_diferencia_dias_sinDecimal+" meses que no subes APT"; 
+        "Hace "+ fecha_diferencia_dias_sinDecimal+" dias que no subes APT"; 
         
-        if( fecha_diferencia_dias_sinDecimal>7){
+        if( fecha_diferencia_dias_sinDecimal>20){
           document.getElementById ('resultado7').innerHTML= "Es necesario intro"
           +"ducir un APT";
         }

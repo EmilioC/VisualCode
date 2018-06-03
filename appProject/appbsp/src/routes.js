@@ -1,7 +1,7 @@
 
 import Listafuera from './Listafuera.vue';
 import Formulario from './Formulario.vue';
-import Listarzona from './ListarZona3.vue';
+import Listarzona from './ListarZona4.vue';
 import FormularioApt from './FormularioImputs.vue';
 import FormularioApt1 from './FormularioApt1.vue';
 import Timeline from './Timeline.vue';
