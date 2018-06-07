@@ -9,7 +9,6 @@
      </p> -->     
      <button @click="aptMayo()" class="button is-link">AÑADIR APT</button>
     <p class="title">{{fechaDiaMesAno}}</p>
-    <input id="fecha" type="date" value="2018-02-27">
     <label class="title" id="aptMes">{{aptMes}}</label>
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 
@@ -28,6 +27,7 @@
         </p>
     </div>
   </div>
+  <hr>
   <div class="level-item has-text-centered ">
     <div>
       <p class="heading">APT MAYO</p>
@@ -150,7 +150,8 @@ export default {
       },  
       filtroMay (){
         var date;
-      return this.apt.filter((juego) => (date = juego.fecha) = this.mayo);
+      return this.apt.filter((juego) => 
+      (date = juego.fecha) = this.mayo);
       },
 
       filtroJune (){
