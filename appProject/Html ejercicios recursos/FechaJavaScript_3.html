@@ -9,21 +9,24 @@
 <!-- onload Event Execute a JavaScript immediately after a page has been loaded-->
 <body onload="startTime()">
 <!-- Show the timing clock actual-->
-  <div id="txt"></div>
-    <label id="demo" ></label>    
-    <br>
-<label>fecha 0</label>
-<input id="fecha0" type="date" value="2018-05-22">
+<div id="txt"></div>
+<label id="demo" class="superior" >RESTAR FECHAS</label>  
 <br>
-<label>fecha 1</label>
-<input id="fecha1" type="date" value="2018-06-09">
-<br>
-<br><button onclick="mostrarFechas()">calculo</button>
-<button onclick="restarFecha()">resta</button><br>
 <hr>
-<label>RESULTADO:</label>
-<label id="resultado" ></label>
-<br>
+  <label>fecha 0</label>
+  <input id="fecha0" type="date" value="2018-05-22">
+  <button onclick="restarFecha()">(fecha1 - fecha2):</button><br>
+  <label>fecha 1</label>
+  <input id="fecha1" type="date" value="2018-06-09">
+  <label id="resultado" ></label>
+<hr>
+  <label>fecha 0</label>
+  <input id="fecha0" type="date" value="2018-05-22">
+  <button onclick="restarFecha()">(fecha1 - fecha2):</button><br>
+  <label>fecha 1</label>
+  <input id="fecha1" type="date" value="2018-06-09">
+  <label id="resultado" ></label>
+<hr>
 <!-- RESTO RESULTADOS 
 <label>RESULTADO 1:</label>
 <label id="resultado1" ></label>
@@ -92,23 +95,21 @@
           return i;
       }
 
-      function restarFecha(){           
-        
+      function restarFecha(){          
+        // Example: https://msdn.microsoft.com/es-es/library/ee532932(v=vs.94).aspx
         /*Read the input type date*/        
         /*Pass the input type date to date class*/
         var fecha0 = new Date(document.getElementById ("fecha0").value); 
         var fecha1 = new Date(document.getElementById ("fecha1").value);
 
-        var timeNow = new Date();
-        // Example: https://msdn.microsoft.com/es-es/library/ee532932(v=vs.94).aspx
+        var anoFecha0= fecha0.getFullYear();
+        var monthFecha0= fecha0.getUTCMonth()+1;        
         /*Restamos fecha actual a fecha Apt */
         var diff = fecha1 - fecha0;
         var diffDays = (diff/(1000*60*60*24));        
         
-        document.getElementById("resultado").innerHTML = diffDays;
-                    
-      }
-    
+        document.getElementById("resultado").innerHTML = diffDays;                    
+      }   
          
   </script>
 
@@ -147,6 +148,9 @@ parent1 {
 }
 #two {
   background: green;
+}
+.superior{
+  background: red;
 }
 
 
