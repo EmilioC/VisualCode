@@ -15,7 +15,7 @@
   <div class="level-item has-text-centered">
     <div>
       <p class="heading">APT Realizados</p>
-      <p class="title">3,456</p>
+      <p class="title">3,458</p>
         <p class="heading" id="demo">
           <ul>
             <li v-for="fecha in fechita"
