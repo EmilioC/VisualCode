@@ -44,7 +44,7 @@
             <th>fecha</th> 
             <th>catergoria</th>          
         </thead >
-             <tr v-for="(mensaje, index) in filtroCategory"
+             <tr v-for="(mensaje, index) in filtroMay"
              v-bind:key="mensaje['.key']">                
                 <td> {{ index  }}</td>
                 <td> {{ mensaje.fecha }} </td>
@@ -149,10 +149,10 @@ export default {
       return this.apt.filter((juego) => juego.category.includes("o y"));
       },  
       filtroMay (){
-      
-      var fechaAPT = new Date(fechaActual);
-      return this.apt.filter((juego) => 
-      (date = juego.fecha) = this.mayo);
+     
+      return this.apt.ref('fecha').orderByValue().on('child_added', snapshot => {
+                    (snapshot.key, snapshot.val());
+                });
       },
 
       filtroJune (){

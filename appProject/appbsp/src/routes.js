@@ -10,8 +10,6 @@ import Boton1 from './Boton1.vue';
 import Boton2 from './Boton2.vue';
 import codeveloper from './CoDeveloper.vue';
 
-
-
 export const routes = [
     {path: '/listafuera', component: Listafuera},
     {path: '/formulario', component: Formulario},
