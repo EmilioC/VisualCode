@@ -1,70 +1,33 @@
 <template>
-   <div id="app">
-     <!--
-     <p id="fecha" v-for="mensaje of apt"
-        v-bind:key="mensaje['.key']">hola
-       <button @click="infoFecha(mensaje['.key'])">
-          Remove</button>
-          {{ mensaje.fecha }}
-     </p> -->     
-     
-    <p class="title">{{fechaDiaMesAno}}</p>
-    <label class="title" id="aptMes">{{aptMes}}</label>
+   <div id="app">    
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
-
-<button @click="infoFecha()" class="button is-link">Filtrar junio</button>
-<nav class="level is-mobile">
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">APT Realizados</p>
-      <p class="title">23</p>
-        <p class="heading" id="demo">
-          <ul>
-            <li v-for="fecha in fechita"
-            v-bind:key="fecha['.key']">
-            </li>
-          </ul>          
-        </p>
-    </div>
-  </div>
-  <hr>
-  <div class="level-item has-text-centered ">
-    <div>
-      <p class="heading">APT MAYO</p>
-      <p class="title">123</p>
-    </div>
-  </div> 
-</nav>
-<hr> <!-- Table of May-->
-<div class="columns is-desktop " >
-    <div class="">
-      <table class="table is-one-fifth is-fullwidth ">
+    <!-- Table of May-->
+  <div>
+      <table class="table is-fullwidth">
         <thead>           
-            <th></th>
-            <th>fecha</th> 
-            <th>categoría</th>          
+            <th>Nº</th> 
+            <th>FECHA</th> 
+            <th>CATEGORÍA</th>          
         </thead >
              <tr v-for="(mensaje, index) in apt"
              v-bind:key="mensaje['.key']">                
-                <td> {{ index  }}</td>
+                <td> {{ index }}</td>
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td>                           
             </tr>
       </table>   
     </div>
-  </div>      
-  </div>
+  </div>  
 </template>
+
 <script>
 import { aptRef } from "./firebase";
 var fechon =  document.getElementById ('demo');
 
 export default {
-
   firebase: {
     apt: aptRef
   },
-
   data() {
     return {
       id: null,
@@ -94,7 +57,6 @@ export default {
       aptMes: "2",
     };
   },
-
   methods: {
     submitName() {
       aptRef.push({
@@ -130,15 +92,9 @@ export default {
     infoFecha (){ 
        this.apt.filter((juego) => juego.fecha.includes("2018-05")).reverse();     
       }
-    },       
+    },    
 
     computed: {
-      aptMayo (){ 
-        return this.cP_a = "6"
-      },
-      aptAbril (){           
-        return this.cP_b = "6"
-      }, 
       /*Filter apt with .id and includes. Test only is 
       the new value that we used for traverse the array */
       filtroId (){
@@ -160,8 +116,7 @@ export default {
       
       /*Recorre en array el apt desde la instancia de Firebase y
       va modificando los datos*/
-      filtroCategory (){      
-      
+      filtroCategory (){   
       var today = new Date();
       var h = today.getHours();
       var min = today.getMinutes();
@@ -177,9 +132,10 @@ export default {
     and we use av-for for take new values of array*/
       
       /*If it is the current month*/
-      var m = "6";
-      var fechaAPTactual = "5";      
-      if ( m = fechaAPTactual) {
+      
+      var mesApt= this.fecha;
+      this.mensaje = mesApt;
+      if ( m = mesApt) {
           return this.apt.filter((juego) => ( 
           juego.id = m,
           juego.fecha = m     

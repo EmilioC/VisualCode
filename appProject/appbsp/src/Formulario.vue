@@ -8,7 +8,7 @@
     when pressing enter we do the same as pressing the send button.  --> 
     <h1> FORMULARIO TABLA NAME
       <button @click="submitName()" v-on:keyup.enter="submitName()" >Add</button> </h1>               
-                <div class="form_group">
+                <div class="form_group ">
                     <label for="id">ID</label>
                     <input v-model="id" type="text" class="input is-focused"/>
                 </div>

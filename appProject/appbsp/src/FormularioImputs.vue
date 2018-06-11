@@ -1,11 +1,11 @@
 <template>
 
-   <div id="app  is-right">
-   <div>        
-      <form class="">
+   <div id="app">
+   <div >        
+      <form >
         <div class="field">
           <label class="label">ID</label>
-          <div class="control">
+          <div class="control ">
             <input v-model="id" class="input" type="text" placeholder="ID">
           </div>
         </div> 

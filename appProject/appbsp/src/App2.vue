@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="initial-scale=1"> 
     <section > 
         <nav class="level">
         <div class="columns is-flex-mobile has-text-centered">
