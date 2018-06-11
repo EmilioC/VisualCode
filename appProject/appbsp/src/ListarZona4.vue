@@ -7,17 +7,17 @@
           Remove</button>
           {{ mensaje.fecha }}
      </p> -->     
-     <button @click="aptMayo()" class="button is-link">AÑADIR APT</button>
+     
     <p class="title">{{fechaDiaMesAno}}</p>
     <label class="title" id="aptMes">{{aptMes}}</label>
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
 
-
+<button @click="infoFecha()" class="button is-link">Filtrar junio</button>
 <nav class="level is-mobile">
   <div class="level-item has-text-centered">
     <div>
       <p class="heading">APT Realizados</p>
-      <p class="title">3,458</p>
+      <p class="title">23</p>
         <p class="heading" id="demo">
           <ul>
             <li v-for="fecha in fechita"
@@ -38,13 +38,13 @@
 <hr> <!-- Table of May-->
 <div class="columns is-desktop " >
     <div class="">
-      <table class="table1 is-one-fifth ">
+      <table class="table is-one-fifth is-fullwidth ">
         <thead>           
             <th></th>
             <th>fecha</th> 
-            <th>catergoria</th>          
+            <th>categoría</th>          
         </thead >
-             <tr v-for="(mensaje, index) in filtroMay"
+             <tr v-for="(mensaje, index) in apt"
              v-bind:key="mensaje['.key']">                
                 <td> {{ index  }}</td>
                 <td> {{ mensaje.fecha }} </td>
@@ -88,6 +88,7 @@ export default {
       mensaje: null,
       username: 'juanwmedia',
       mensajes: [],
+      apt: [],
       fechita: "",
       fechaDiaMesAno: "",
       aptMes: "2",
@@ -127,8 +128,7 @@ export default {
       });
     },
     infoFecha (){ 
-      fechas: this.fechas;
-      fechas = "vamos";      
+       this.apt.filter((juego) => juego.fecha.includes("2018-05")).reverse();     
       }
     },       
 
@@ -146,18 +146,16 @@ export default {
       }, 
       /*Filter apt with letters insite of field category with includes*/
       filtroCategoria (){
-      return this.apt.filter((juego) => juego.category.includes("o y"));
+      return this.apt.filter((juego) => juego.category.includes("e"));
       },  
-      filtroMay (){
-     
-      return this.apt.ref('fecha').orderByValue().on('child_added', snapshot => {
-                    (snapshot.key, snapshot.val());
-                });
+      filtroMay (){ 
+        //Con .reverse()recuperamos el último dato añadido a la db.    
+      return this.apt.filter((juego) => juego.fecha.includes("2018-05")).reverse();         
       },
-
       filtroJune (){
-        var date;
-      return this.apt.filter((juego) => (date = juego.fecha) = this.mayo);
+        return this.apt.ref('fecha').orderByValue().on('child_added', snapshot => {
+                    console.log(snapshot.key, snapshot.val());
+                });
       },
       
       /*Recorre en array el apt desde la instancia de Firebase y

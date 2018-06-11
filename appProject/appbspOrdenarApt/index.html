@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue</title>
+    <style lang="css">
+        @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
+        @import '/node_modules/bulma/css/bulma.min.css';
+    
+    </style>
 </head>
 <body>
 <div id="app">
@@ -11,12 +16,27 @@
     <button @click="ordenarPorKey">Por Key del nodo</button>
     <button @click="ordenarPorValor">Por Valor</button>
 </div>
+
+<!-- Test with call to Firebase Apt data-->
+
+<div class="level-item has-text-centered">
+    <div>
+      <p class="heading">APT Realizados</p>
+      <p class="title">3,458</p>
+        <p class="heading" id="demo">
+          <ul>
+            <li v-for="fecha in fechita"
+            v-bind:key="fecha['.key']">
+            </li>
+          </ul>          
+        </p>
+    </div>
+  </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
 <script>
     // Initialize Firebase
     const config = {
-
         apiKey: "AIzaSyAHp3vB8Mc8JzdSXptEh3KY9LBQ97PeNLg",
         authDomain: "basedatos2-ccc9b.firebaseapp.com",
         databaseURL: "https://basedatos2-ccc9b.firebaseio.com",
@@ -24,9 +44,11 @@
         storageBucket: "basedatos2-ccc9b.appspot.com",
         messagingSenderId: "965566008304"
     };
+    var aptFirebase = config
     firebase.initializeApp(config);
     const db = firebase.database();
     const gatosRef = db.ref('gatos');
+    const aptRef = db.ref('apt');
     // Datos iniciales
     const gatos = [
         {nombre: 'Rouco', edad: "2018-05-12", color: 'blanco y negro'},
@@ -51,6 +73,32 @@
         },
         data: {
             gatos: gatosRef,
+             apt: {
+                id: null,
+                    supervisor: "JA",
+                    fecha: "20/04/2018",
+                    descripcion: "Material dentro del recinto",
+                    accion: "Retirada del material",
+                    typeAPT: "Comportamiento",
+                    category: "Riesgo tropezar o caer",
+                    photo: "si",
+                    aprendizaje: "Responsabilidad equipos en buen estado",
+                    causes: "Reducción probabilidad de accidente",
+                    /* Test with Computed Properties 
+                    https://vuejs.org/v2/guide/computed.html#Computed-Properties*/
+                    fechas :"fechas",
+                    cP_: "si",
+                    cP_a :"3",
+                    cP_b :"4",
+                    minimo : "0",
+                    mayo: "31-05-2018", 
+                    mensaje: null,
+                    username: 'juanwmedia',
+                    mensajes: [],
+                    fechita: "",
+                    fechaDiaMesAno: "",
+                    aptMes: "2",
+                },
         },
         methods: {
             ordenarPorKeySecundaria(key) {
@@ -60,14 +108,17 @@
             },
             ordenarPorKey() {
                 this.gatos.orderByKey().on('child_added', snapshot => {
-                    console.log(snapshot.key, snapshot.val());
+                    console.log(snapshot.key, snapshot.val());                    
                 });
             },
             ordenarPorValor() {
                 db.ref('votos').orderByValue().on('child_added', snapshot => {
                     console.log(snapshot.key, snapshot.val());
                 });
-            }
+            },
+            filtroCategoria (){
+            return this.apt.filter((juego) => juego.category.includes("o y"));
+      },  
         }
     });
 </script>
