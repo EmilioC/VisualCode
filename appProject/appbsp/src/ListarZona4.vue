@@ -2,8 +2,12 @@
    <div id="app">    
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
     <!-- Table of May-->
-
-    <p>{{mensaje}}</p>
+    <div class="level-item has-text-centered ">
+    <div>
+      <p class="heading">APT MAYO</p>
+      <p class="title">{{numberAptActualMonth}}</p>
+    </div>
+  </div>
   <div>
       <table class="table is-fullwidth">
         <thead>           
@@ -11,7 +15,7 @@
             <th>FECHA</th> 
             <th>CATEGORÍA</th>          
         </thead >
-             <tr v-for="(mensaje, index) in filtroJune"
+             <tr v-for="(mensaje, index) in filtroActualMonth"
              v-bind:key="mensaje['.key']">                
                 <td> {{ index+1 }}</td>
                 <td> {{ mensaje.fecha }} </td>
@@ -25,6 +29,22 @@
 <script>
 import { aptRef } from "./firebase";
 var fechon =  document.getElementById ('demo');
+
+var today = new Date();
+      var h = today.getHours();
+      var min = today.getMinutes();
+      var s = today.getSeconds();      
+      var m = today.getMonth()+1;
+      var d = today.getUTCDate();
+      var a = today.getUTCFullYear();       
+      this.fechaDiaMesAno = a+"-"+m+"-"+d;  
+      var today = new Date();   
+      var m = today.getMonth()+1;
+      var ano2018 = "2018";
+      var guion = "-";
+      var cero = "0";
+      //Variable verifica mes actual
+      var mesActual =a+guion+cero+m+guion;
 
 export default {
   firebase: {
@@ -57,6 +77,7 @@ export default {
       fechita: "",
       fechaDiaMesAno: "",
       aptMes: "2",
+      numberAptActualMonth: "",
     };
   },
   methods: {
@@ -94,7 +115,9 @@ export default {
     infoFecha (){ 
        this.apt.filter((juego) => juego.fecha.includes("2018-05")).reverse();     
       }
-    },    
+    },  
+    
+   
 
     computed: {
       /*Filter apt with .id and includes. Test only is 
@@ -106,36 +129,46 @@ export default {
       filtroCategoria (){
       return this.apt.filter((juego) => juego.category.includes("e"));
       },  
-      filtroMay (){ 
+      filtroActualMonth (){ 
+        //Intentando contar el número de APT en el mes
+        //En principio cuantos apt hay con fecha 2018-06-13
+        //pero devuelve la posición del APT que cumple con la 
+        //condición fecha pero no el número de APT que cumplen la condición.
+        var numeroApts = 0; 
+        for (var i=0; i < this.apt.length; i++)
+          {
+            //Revisar contador para filtrar por mes actual. 
+            if ( this.apt[i].fecha == "2018-06-13")
+            {
+              numeroApts ++;
+              this.numberAptActualMonth = numeroApts;
+            }
+          }
         //Con .reverse()recuperamos el último dato añadido a la db.    
-      return this.apt.filter((juego) => juego.fecha.includes("2018-05")).reverse();         
+      return this.apt.filter((juego) => juego.fecha.includes(mesActual)).reverse();
+      this.mensaje = "hola";
+        
       },
       filtroJune (){
         return this.apt.ref('fecha').orderByValue().on('child_added', snapshot => {
                     console.log(snapshot.key, snapshot.val());
                 });
       },
+       numberAptActualMonth1 : function (){
+      for (var i=0; i < this.apt.length; i++)
+      {
+        if ( this.apt[i].fecha == "2018-06-13")
+        {
+          numberAptActualMonth = i;
+        }
+      }
+    },
       
       /*Recorre en array el apt desde la instancia de Firebase y
       va modificando los datos*/
-      filtroCategory (){   
-      var today = new Date();
-      var h = today.getHours();
-      var min = today.getMinutes();
-      var s = today.getSeconds();
-      
-      var m = today.getMonth()+1;
-      var d = today.getUTCDate();
-      var a = today.getUTCFullYear();
-
-      this.fechaDiaMesAno = a+"-"+m+"-"+d;  
-
-            var today = new Date();   
-            var m = today.getMonth()+1;
-
-    /*Test with create new array type apt but we modify*
-    and we use av-for for take new values of array*/
-      
+      filtroCategory (){ 
+      /*Test with create new array type apt but we modify*
+      and we use av-for for take new values of array*/      
       /*If it is the current month*/
       
       var mesApt= this.fecha;
@@ -144,23 +177,21 @@ export default {
       if ( m = mesApt) {
           return this.apt.filter((juego) => ( 
           juego.id = m,
-          juego.fecha = m     
+          juego.fecha = d     
           ));
       }
       else {
           return this.apt.filter((juego) => ( 
           juego.id = m    
           ));
-      }
+      } 
 
       /*Probando con un if dentro del recorrer juego.id.. ju
       if( today.month()= juego.fech() | today.year() = juego.fecha().year())
       (juego.id = h,
       juego.fecha =d,
-      juego.category = m   
-        
-      ));0*/ 
-  
+      juego.category = m           
+      ));0*/   
   }}
 };
 </script>
