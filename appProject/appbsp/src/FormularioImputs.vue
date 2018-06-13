@@ -1,7 +1,6 @@
 <template>
-
    <div id="app">
-   <div >        
+   <div>        
       <form >
         <div class="field">
           <label class="label">ID</label>

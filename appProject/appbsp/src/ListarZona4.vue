@@ -2,6 +2,8 @@
    <div id="app">    
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
     <!-- Table of May-->
+
+    <p>{{mensaje}}</p>
   <div>
       <table class="table is-fullwidth">
         <thead>           
@@ -9,9 +11,9 @@
             <th>FECHA</th> 
             <th>CATEGORÍA</th>          
         </thead >
-             <tr v-for="(mensaje, index) in apt"
+             <tr v-for="(mensaje, index) in filtroJune"
              v-bind:key="mensaje['.key']">                
-                <td> {{ index }}</td>
+                <td> {{ index+1 }}</td>
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td>                           
             </tr>
@@ -126,7 +128,10 @@ export default {
       var d = today.getUTCDate();
       var a = today.getUTCFullYear();
 
-      this.fechaDiaMesAno = a+"-"+m+"-"+d;     
+      this.fechaDiaMesAno = a+"-"+m+"-"+d;  
+
+            var today = new Date();   
+            var m = today.getMonth()+1;
 
     /*Test with create new array type apt but we modify*
     and we use av-for for take new values of array*/
@@ -135,6 +140,7 @@ export default {
       
       var mesApt= this.fecha;
       this.mensaje = mesApt;
+      var variable = "6";
       if ( m = mesApt) {
           return this.apt.filter((juego) => ( 
           juego.id = m,
