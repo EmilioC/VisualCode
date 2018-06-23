@@ -10,14 +10,13 @@
   </div>
   <div>
       <table class="table is-fullwidth">
-        <thead>           
-            <th>Nº</th> 
+        <thead> 
             <th>FECHA</th> 
             <th>CATEGORÍA</th>          
         </thead >
-             <tr v-for="(mensaje, index) in filtroActualMonth"
+             <tr v-for="mensaje in filtroActualMonth"
              v-bind:key="mensaje['.key']">                
-                <td> {{ index+1 }}</td>
+               <!-- <td> {{ index+1 }}</td> -->
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td>                           
             </tr>
@@ -115,10 +114,7 @@ export default {
     infoFecha (){ 
        this.apt.filter((juego) => juego.fecha.includes("2018-05")).reverse();     
       }
-    },  
-    
-   
-
+    },   
     computed: {
       /*Filter apt with .id and includes. Test only is 
       the new value that we used for traverse the array */
@@ -134,20 +130,16 @@ export default {
         //En principio cuantos apt hay con fecha 2018-06-13
         //pero devuelve la posición del APT que cumple con la 
         //condición fecha pero no el número de APT que cumplen la condición.
-        var numeroApts = 0; 
+        var numeroApts = 0;
+        var myDate1 = new Date ('2018-06-14'); 
         for (var i=0; i < this.apt.length; i++)
           {
-            //Revisar contador para filtrar por mes actual. 
-            if ( this.apt[i].fecha == "2018-06-13")
-            {
-              numeroApts ++;
-              this.numberAptActualMonth = numeroApts;
-            }
+            var dateapt = this.apt[i].fecha;
+           this.numberAptActualMonth = dateapt; 
+           return dateapt.getMonth;
           }
         //Con .reverse()recuperamos el último dato añadido a la db.    
-      return this.apt.filter((juego) => juego.fecha.includes(mesActual)).reverse();
-      this.mensaje = "hola";
-        
+    //  return this.apt.filter((juego) => juego.fecha.includes(mesActual)).reverse();       
       },
       filtroJune (){
         return this.apt.ref('fecha').orderByValue().on('child_added', snapshot => {

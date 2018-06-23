@@ -195,8 +195,30 @@ export default {
         
       ));0*/ 
   
-  }}
+  }},
+   filtroActualMonth (){ 
+        //Intentando contar el número de APT en el mes
+        //En principio cuantos apt hay con fecha 2018-06-13
+        //pero devuelve la posición del APT que cumple con la 
+        //condición fecha pero no el número de APT que cumplen la condición.
+        var numeroApts = 0;
+        var myDate1 = new Date ('2018-06-13'); 
+        for (var i=0; i < this.apt.length; i++)
+          {
+            //Revisar contador para filtrar por mes actual. 
+            if (this.apt[i].fecha == myDate1)
+            {
+              numeroApts ++;
+              this.numberAptActualMonth = numeroApts;
+              return this.apt[i].fecha;       
+            }
+          }
+        //Con .reverse()recuperamos el último dato añadido a la db.    
+    //  return this.apt.filter((juego) => juego.fecha.includes(mesActual)).reverse();       
+      },
 };
+
+
 </script>
 
 <style lang="css">
