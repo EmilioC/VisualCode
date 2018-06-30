@@ -2,7 +2,7 @@
    <div id="app">    
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
     <!-- Table of May-->
-    <div class="level-item has-text-centered ">
+    <div class="level-item">
     <div>
       <p class="heading">APT MAYO</p>
       <p class="title">{{numberAptActualMonth}}</p>
@@ -14,17 +14,17 @@
             <th>FECHA</th> 
             <th>CATEGORÍA</th>          
         </thead >
-             <tr v-for="mensaje in filtroActualMonth"
+             <tr v-for="mensaje in apt"
              v-bind:key="mensaje['.key']">                
                <!-- <td> {{ index+1 }}</td> -->
                 <td> {{ mensaje.fecha }} </td>
-                <td> {{ mensaje.category }} </td>                           
+                <td> {{ mensaje.category }} </td> 
+                <td> {{ mensaje.accion }} </td>                          
             </tr>
       </table>   
     </div>
   </div>  
 </template>
-
 <script>
 import { aptRef } from "./firebase";
 var fechon =  document.getElementById ('demo');
@@ -44,7 +44,6 @@ var today = new Date();
       var cero = "0";
       //Variable verifica mes actual
       var mesActual =a+guion+cero+m+guion;
-
 export default {
   firebase: {
     apt: aptRef
@@ -134,7 +133,7 @@ export default {
         var myDate1 = new Date ('2018-06-14'); 
         for (var i=0; i < this.apt.length; i++)
           {
-            var dateapt = this.apt[i].fecha;
+          var dateapt = this.apt[i].fecha;
            this.numberAptActualMonth = dateapt; 
            return dateapt.getMonth;
           }
@@ -154,15 +153,13 @@ export default {
           numberAptActualMonth = i;
         }
       }
-    },
-      
+    },      
       /*Recorre en array el apt desde la instancia de Firebase y
       va modificando los datos*/
       filtroCategory (){ 
       /*Test with create new array type apt but we modify*
       and we use av-for for take new values of array*/      
-      /*If it is the current month*/
-      
+      /*If it is the current month*/      
       var mesApt= this.fecha;
       this.mensaje = mesApt;
       var variable = "6";
@@ -176,7 +173,7 @@ export default {
           return this.apt.filter((juego) => ( 
           juego.id = m    
           ));
-      } 
+      }
 
       /*Probando con un if dentro del recorrer juego.id.. ju
       if( today.month()= juego.fech() | today.year() = juego.fecha().year())
@@ -187,9 +184,7 @@ export default {
   }}
 };
 </script>
-
 <style lang="css">
     @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
     @import '/node_modules/bulma/css/bulma.min.css';
-
 </style>
