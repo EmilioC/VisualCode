@@ -12,9 +12,10 @@
       <table class="table is-fullwidth">
         <thead> 
             <th>FECHA</th> 
-            <th>CATEGORÍA</th>          
+            <th>CATEGORÍA</th>  
+            <th>ACCIONES</th>         
         </thead >
-             <tr v-for="mensaje in apt"
+             <tr v-for="mensaje in filtroActualMonth"
              v-bind:key="mensaje['.key']">                
                <!-- <td> {{ index+1 }}</td> -->
                 <td> {{ mensaje.fecha }} </td>
@@ -174,7 +175,6 @@ export default {
           juego.id = m    
           ));
       }
-
       /*Probando con un if dentro del recorrer juego.id.. ju
       if( today.month()= juego.fech() | today.year() = juego.fecha().year())
       (juego.id = h,
