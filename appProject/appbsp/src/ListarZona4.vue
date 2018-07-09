@@ -11,13 +11,15 @@
   <div>
       <table class="table is-fullwidth">
         <thead> 
+            <th>ID</th> 
             <th>FECHA</th> 
             <th>CATEGORÍA</th>  
             <th>ACCIONES</th>         
         </thead >
-             <tr v-for="mensaje in filtroActualMonth"
+             <tr v-for="mensaje in filtroId"
              v-bind:key="mensaje['.key']">                
                <!-- <td> {{ index+1 }}</td> -->
+               <td> {{ mensaje.id }} </td> 
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td> 
                 <td> {{ mensaje.accion }} </td>                          
