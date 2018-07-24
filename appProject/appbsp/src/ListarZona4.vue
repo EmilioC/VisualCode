@@ -16,10 +16,10 @@
             <th>CATEGORÍA</th>  
             <th>ACCIONES</th>         
         </thead >
-             <tr v-for="mensaje in filtroId"
+             <tr v-for="mensaje in numberAptActualMonth1"
              v-bind:key="mensaje['.key']">                
                <!-- <td> {{ index+1 }}</td> -->
-               <td> {{ mensaje.id }} </td> 
+               <td> {{ mensaje.id  }} </td> 
                 <td> {{ mensaje.fecha }} </td>
                 <td> {{ mensaje.category }} </td> 
                 <td> {{ mensaje.accion }} </td>                          
@@ -121,7 +121,7 @@ export default {
       /*Filter apt with .id and includes. Test only is 
       the new value that we used for traverse the array */
       filtroId (){
-      return this.apt.filter((test) => test.id.includes("3"));
+      return this.apt.filter((test) => test.fecha.includes("2018-"));
       }, 
       /*Filter apt with letters insite of field category with includes*/
       filtroCategoria (){
@@ -165,7 +165,7 @@ export default {
       /*If it is the current month*/      
       var mesApt= this.fecha;
       this.mensaje = mesApt;
-      var variable = "6";
+      var variable = "1";
       if ( m = mesApt) {
           return this.apt.filter((juego) => ( 
           juego.id = m,

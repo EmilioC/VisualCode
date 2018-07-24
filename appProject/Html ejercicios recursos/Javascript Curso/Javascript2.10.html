@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <script>
+   
+    </script>
+</head>
+<!-- onload Event Execute a JavaScript immediately after a page has been loaded-->
+<body onload="startTime()">
+	
+<!-- Show the timing clock actual-->
+  <label>hola</label>
+  <div id="txt">hola</div>
+  <div id="txt1">hola</div>
+  <div id="txt2" class= "txt2">hola</div>
+  
+	<label id="demo" ></label>
+	<label id="demo1" ></label>
+	<label id="demo2" ></label>
+    
+    <br>
+<input id="fecha" type="date" value="2018-07-14">
+<input id="fecha1" type="date" value="2018-07-25">
+<input id="input1" class="date" type="text" placeholder="fecha">
+<br><button onclick="mostrarFechas()">calculo</button>
+<button onclick="restarFecha()">resta</button><br>
+
+<label>IMPUT 1  :</label>
+<label id="resultado" ></label>
+<br>
+<label>"   2  :</label>
+<label id="resultado1" ></label>
+<br>
+<label>today.toUTCString():</label>
+<label id="resultado2" ></label>
+<br>
+<label>getMonth():</label>
+<label id="resultado3" ></label>
+<br>
+<label>getMilliseconds() :</label>
+<label id="resultado4" ></label>
+<br>
+<label>getUTCDate() :</label>
+<label id="resultado5" ></label>
+<br>
+<label>RESULTADO 6:</label>
+<label id="resultado6" ></label>
+<br>
+<label>RESULTADO 7:</label>
+<label id="resultado7" ></label>
+<br>
+<label>SUMA 1 DÍA: </label>
+<label id="resultado8" ></label>
+<br>
+
+<label>dia</label>
+<label id="dia" ></label>
+<label>mes</label>
+<label id="mes" ></label>
+<label>año</label>
+<label id="ano" ></label>
+<br>
+<label>Fecha completa</label>
+<label id="dateComplete" ></label>
+<hr>
+<label>dia: </label>
+<label id="dia1" ></label>
+<label>mes: </label>
+<label id="mes1" ></label>
+<label>año:</label>
+<label id="ano1" ></label>
+<br>
+<label>Fecha completa: </label>
+<label id="dateComplete1" ></label>
+</body>
+
+<script>
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+	document.getElementById("demo1").innerHTML = d.toDateString();
+	document.getElementById("demo2").innerHTML = d.toDateString();
+    var d1 = new Date(2020, 11, 22, 8, 31, 31);
+    function mostrarFechas(){ 
+      document.getElementById("dia").innerHTML = d.getUTCDate();
+      document.getElementById("mes").innerHTML = d.getMonth();
+      document.getElementById("ano").innerHTML = d.getFullYear();
+      document.getElementById("dateComplete").innerHTML = d.toDateString();
+
+      document.getElementById("dia1").innerHTML = d1.getUTCDate();
+      document.getElementById("mes1").innerHTML = d1.getMonth();
+      document.getElementById("ano1").innerHTML = d1.getFullYear();
+      document.getElementById("dateComplete1").innerHTML = d1.getDay();
+    }
+    /*<!-- Show timing clock-->*/
+ function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+	  var m1 = today.getMinutes();
+      var s1 = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+	  m1 = checkTime1(m1);
+      s1 = checkTime1(s1);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+
+	  document.getElementById('txt1').innerHTML =
+      h + ":" + m1 + ":" + s1;
+	  document.getElementById('txt2').innerHTML =
+      h + ":" + m + ":" + s;
+	  /* Crea una temporizacion para que cada medio 
+	  segundo se vuelva a ejecutar la función startTime*/
+      var t = setTimeout(startTime, 8000);
+	    /* temporización refresco en pantalla 4 seg*/
+      }
+
+	  
+      function checkTime(i) {
+          if (i < 11) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+	  function checkTime1(i) {
+          if (i < 1) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+      function restarFecha(){        
+        
+        var fechaActual = document.getElementById ("fecha").value;
+        var fechaApt = document.getElementById ('fecha1').value;
+
+        var fechaFin = new Date(fechaActual);
+        var today = new Date();
+
+        // Example: https://msdn.microsoft.com/es-es/library/ee532932(v=vs.94).aspx
+       // var birthday = new Date(fechaActual);
+        var fecha_diferencia_milisegundos = fechaFin - today ;
+        var fecha_diferencia_dias =
+         (fecha_diferencia_milisegundos/(1000*60*60*24));
+         var fecha_diferencia_dias_sinDecimal = fecha_diferencia_dias.toFixed(1);        
+        
+        document.getElementById ('resultado').innerHTML= fechaActual;
+        document.getElementById ('resultado1').innerHTML= fechaApt;
+        document.getElementById ('resultado2').innerHTML= today.toUTCString();
+        document.getElementById ('resultado3').innerHTML= today.getMonth();
+        document.getElementById ('resultado4').innerHTML= today.getMilliseconds();
+        document.getElementById ('resultado5').innerHTML= today.getUTCDate();
+        document.getElementById ('resultado6').innerHTML= 
+        "Hace "+ fecha_diferencia_dias_sinDecimal+" dias que no subes APT"; 
+        document.getElementById ('resultado7').innerHTML= "resultado7";
+        var fechaActualMenosUno = fechaActual.setMonth(fechaActual.getMonth + 1) ;
+        document.getElementById ('resultado8').innerHTML= fechaActualMenosUno.getUTCDate();
+      }
+    
+         
+  </script>
+
+<style>  
+
+.txt2 { background-color: aqua;
+  }
+  .demo6{
+    background-color: aqua;
+  }
+  .demo7{
+    background-color: rgb(60, 255, 0);
+  }
+parent1 {
+ border: 2px rgb(132, 207, 148) dotted;
+ display: inline-block;
+}
+.box1 {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two1 {
+  top: 30px;
+  left: 20px;
+  background: rgb(137, 185, 137);
+  position: relative;
+}
+.parent {
+ border: 2px black dotted;
+ display: inline-block;
+}
+.box {
+ display: inline-block;
+ background: red;
+ width: 100px;
+ height: 100px;
+}
+#two {
+  background: green;
+}
+
+
+</style>
+
+</html>
