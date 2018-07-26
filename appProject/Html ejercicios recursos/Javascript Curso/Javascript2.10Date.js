@@ -10,7 +10,7 @@
     };*/
     while (numero1 <=0 || numero2 <=0 || isNan(numero1) || isNan(numero2)){
       numero1 = parseInt(prompt ("Introduce número1"));
-      numero2 = parseInt(prompt ("Introduce número2"));
+      numero2 = parseInt(prompt ("Introduce núme0ro2"));
     }
 
     if (numero1 == numero2){
