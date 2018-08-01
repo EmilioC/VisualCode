@@ -11,6 +11,6 @@ while (numero1 < numero2){
 	numero1 ++;
 
 	if (numero1%2 == 0){
-		document.print ("<h6>El número "+numero1+"es impar</h6>")
+		document.write ("<h6>El número "+numero1+"es impar</h6>")
 	}
 }
