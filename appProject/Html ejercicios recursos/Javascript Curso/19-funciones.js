@@ -3,16 +3,29 @@
 // Funciones
 // Una función es una agrupación reutilizable de un conjunto de instrucciones
 
-function curso(){   
+
+function calculadora(numero1, numero2){   	
 	
-	document.getElementById ('demo').innerHTML= "alo";
+	console.log (numero1 * numero2);
+	document.write("Suma: " + (numero1 * numero2)+"<br/>");
    
   }
-  function curso1(){   
+
+  function suma1 (numero1){   	
 	
-	console.log ("ALOA ALOA");
+	return (numero1 + 1);
    
   }
+
+  function suma1000 (a , b){	 
+	
+	document.write("Suma: " + (a + b)+"<br/>");
+	document.write("Suma1: " + ((suma1 (a))+ 4)+"<br/>");
+	calculadora (a, b);
+  }
+
+  calculadora (3, 9);
+  suma1000 (5,5);
 
 function restarFecha(){     
         
@@ -85,7 +98,7 @@ function restarFecha(){
 	 (fecha_diferencia_milisegundos/(1000*60*60*24));
 	 var fecha_diferencia_dias_sinDecimal = fecha_diferencia_dias.toFixed(0); 
 
-	 var fecha_diferencia_horas =
+	 var fecha_diferencia_horas =             
 	 (fecha_diferencia_milisegundos/(1000*60*60));
 	 var fecha_diferencia_horas_sinDecimal = fecha_diferencia_horas.toFixed(0); 
 	 
