@@ -11,6 +11,7 @@
             <button class="button is-link is-outlined is-large"><router-link to="/formularioapt">Formulario </router-link></button>
         </div>  
         </div> 
+         
         
         <!--
         <router-link to="/resumen1">Resumen 1</router-link>
@@ -34,7 +35,7 @@ export default {
     @import '/node_modules/bulma-extensions/bulma-timeline/dist/bulma-timeline.min.css';
     @import '/node_modules/bulma/css/bulma.min.css';
 #app {
-  margin-top: 2%;
+  margin-top: 0%;
 }
 
 </style>

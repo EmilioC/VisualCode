@@ -1,10 +1,54 @@
+
+    
+  
 <template>
    <div id="app">    
      <!-- Atribute is-mobile information: https://bulma.io/documentation/layout/level/ -->
     <!-- Table of May-->
+<div class="columns is-mobile">
+  <div class="column">
+    <div>
+      <table class="table is-fullwidth">
+        <thead> 
+            <th>ID</th> 
+            <th>FECHA</th> 
+            <th>CATEGORÍA</th>  
+            <th>ACCIONES</th>         
+        </thead >
+             <tr v-for="mensaje in apt"
+             v-bind:key="mensaje['.key']">                
+               <!-- <td> {{ index+1 }}</td> -->
+               <td> {{ mensaje.id  }} </td> 
+                <td> {{ mensaje.fecha }} </td>
+                <td> {{ mensaje.category }} </td> 
+                <td> {{ mensaje.accion }} </td>                          
+            </tr>
+      </table>   
+    </div>
+  </div>
+  <div class="column">
+    <section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column">
+						<!-- ... -->
+					</div>
+					<div class="column">
+						<!-- ... -->
+					</div>
+						<div class="column">
+						<!-- ... -->
+					</div>
+				</div>
+			</div>
+		</section>
+  </div>
+  
+</div>
+
     <div class="level-item">
     <div>
-      <p class="heading">APT MAYO</p>
+      <p class="heading">APT MAYOS</p>
       <p class="title">{{numberAptActualMonth}}</p>
     </div>
   </div>
@@ -16,7 +60,7 @@
             <th>CATEGORÍA</th>  
             <th>ACCIONES</th>         
         </thead >
-             <tr v-for="mensaje in numberAptActualMonth1"
+             <tr v-for="mensaje in apt"
              v-bind:key="mensaje['.key']">                
                <!-- <td> {{ index+1 }}</td> -->
                <td> {{ mensaje.id  }} </td> 
@@ -27,6 +71,9 @@
       </table>   
     </div>
   </div>  
+
+
+  
 </template>
 <script>
 import { aptRef } from "./firebase";

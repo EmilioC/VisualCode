@@ -1,7 +1,31 @@
 <template>
   <div id="app">
     <meta name="viewport" content="width=device-width, initial-scale=1">      
-    <section >      
+    <section >   
+<div class="tabs is-toggle ">
+  <ul class="is-expanded">
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i  aria-hidden="true"></i></span>
+        <span><router-link to="/formularioapt">Formulario </router-link></span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i aria-hidden="true"></i></span>
+        <span><router-link to="/listarzona">Consulta</router-link></span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i  aria-hidden="true"></i></span>
+        <span><router-link to="/timeline">Timeline</router-link></span>
+      </a>
+    </li>
+    </ul>
+</div>
+
+
         <router-link to="/formularioapt">Formulario </router-link>
         <router-link to="/listarzona">Consulta</router-link>
         <router-link to="/timeline">Timeline</router-link> 
