@@ -19,8 +19,6 @@ function (datos){
 	console.log("2ª function: "+(datos*10000));
 }),
 
-
-
 function restarFecha(){     
         
 	var fechaActual = document.getElementById ("fecha").value;
