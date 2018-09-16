@@ -29,10 +29,26 @@ function calculadora(numero1, numero2, mostrar = false){
 	return true;
 }
 
-calculadora(1, 4);
-calculadora(2, 5, true);
-calculadora(4, 5, true);
-calculadora(10, 8);
+function suma (numero1, numero2){
+	console.log("Suma: " + (numero1+numero2));
+}
+
+function sumaMas(numero1, numero2){
+
+	return (numero1 + numero2);
+	console.log ("function sumaMas realizada");
+
+}
+
+function sumaTotal (sumando1, sumando2){
+ var resultado = sumaMas (sumando1, sumando2);
+ var resultadoTotal = resultado + 100;
+ console.log (resultado);
+}
+
+sumaTotal (2,2);
+
+
 
 /*
 for(var i = 1; i <= 10; i++){
