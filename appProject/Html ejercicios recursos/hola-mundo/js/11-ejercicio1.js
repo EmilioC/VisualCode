@@ -8,12 +8,20 @@ PLUS: Si los numeros no son un numero o son menores o iguales a cero, nos los vu
 var numero1 = parseInt(prompt('Introduce el primer numero', 0));
 var numero2 = parseInt(prompt('Introduce el segundo numero', 0));
 
-while(numero1 <= 0 || numero2 <= 0 || isNaN(numero1) || isNaN(numero2)){
+/*while(numero1 <= 0 || numero2 <= 0 || isNaN(numero1) || isNaN(numero2)){
 	numero1 = parseInt(prompt('Introduce el primer numero', 0));
 	numero2 = parseInt(prompt('Introduce el segundo numero', 0));
 }
+*/
 
-if(numero1 == numero2){
+while(numero1 == 0 || numero2 <3 ){
+	numero1 = parseInt(prompt('Repetimos introduce el primer numero', 0));
+	numero2 = parseInt(prompt('Repeat again introduce el segundo numero', 0));
+}
+
+alert("LOS NUMEROS SON IGUALES");
+
+/*if(numero1 == numero2){
 	alert("LOS NUMEROS SON IGUALES");
 
 }else if(numero1 > numero2){
@@ -26,4 +34,4 @@ if(numero1 == numero2){
 
 }else{
 	alert("INTRODUCE NUMEROS CORRECTOS");
-}
+}*/
